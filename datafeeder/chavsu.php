@@ -6,8 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CHAVSU</title>
   <!-- Link to external CSS file -->
+  <link rel="stylesheet" type="text/css" href="css/fontawesome.min.css">
   <link rel="stylesheet" type="text/css" href="css/styles.css">
-</head>
+  </head>
 
 <body>
 
@@ -29,10 +30,12 @@
   <!-- Table on the right side -->
   <div class="table-container">
     <table>
-      <caption>Entered Keywords</caption>
+      <caption>Entered Data</caption>
       <thead>
         <tr>
+          <th>Actions</th>
           <th>Keyword</th>
+          <th>Response</th>
         </tr>
       </thead>
       <tbody id="keywordTableBody">
