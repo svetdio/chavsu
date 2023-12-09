@@ -9,24 +9,28 @@ $(function () {
         })
     });
 
-    // You should perform proper validation before sending data to the server
-
-    fetch('api/view_keyword.php', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/x-www-form-urlencoded',
-        },
-        // body: username=${encodeURIComponent(username)}&password=${encodeURIComponent(password)},
+    // You should perform proper validation before sending data to the serve
+    $.get('api/view_keyword.php', function (d) {
+        console.log(d)
     })
-        .then(response => response.json())
-        .then(data => {
-            //     if (data.success) {
-            //         // Redirect to chavsu.php upon successful login
-            //         window.location.href = 'chavsu.php';
-            //     } else {
-            //         errorMessage.textContent = 'Invalid username or password';
-            //     }
-        })
+    // fetch('api/view_keyword.php', {
+    //     method: 'POST',
+    //     headers: {
+    //         'Content-Type': 'application/x-www-form-urlencoded',
+    //     },
+    //     // body: username=${encodeURIComponent(username)}&password=${encodeURIComponent(password)},
+    // })
+    //     .then(response => response.json())
+    //     .then(data => {
+    //             if (data.success) {
+    //                 console.log(data.keywords);
+    //                 data.keywords.forEach(keywords => {
+    //                     console.log(keywords); // Log each keyword to the console
+    //                 }); 
+    //             } else {
+    //                 errorMessage.textContent = 'Invalid username or password';
+    //             }
+    //     })
 
-        .catch(error => console.error('Error during login:', error));
+    //     .catch(error => console.error('Error during login:', error));
 })
