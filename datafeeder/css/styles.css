@@ -8,12 +8,13 @@ body {
   
   .container {
     max-width: 600px;
-    margin: 50px auto; /* Adjusted margin to push the container to the left */
+    margin: 50px; /* Adjusted margin to push the container to the left */
     padding: 20px;
     background-color: #ffffff; /* White container background color */
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
+    float: left;
   }
   
   h1 {
@@ -58,10 +59,11 @@ body {
   }
 
   .table-container {
-    flex: 1; /* Take remaining space in the row */
-    margin: 50px 20px auto; /* Adjusted margin to push the container to the right */
-  }
-  
+    float: right;
+    width: 50%; /* Adjust the width as needed */
+    margin-top: 50px; /* Adjust the margin as needed */
+}
+
   table {
     width: 100%;
     max-width: 80%; /* Set the maximum width for the table */
