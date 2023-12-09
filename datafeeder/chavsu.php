@@ -34,12 +34,6 @@
         <tr>
           <th>Keyword</th>
         </tr>
-        <tr>
-          <td></td>
-        </tr>
-        <tr>
-          <td></td>
-        </tr>
       </thead>
       <tbody id="keywordTableBody">
         <!-- Keywords will be dynamically added here -->
