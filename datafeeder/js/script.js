@@ -29,15 +29,33 @@ $(function () {
                 itr = 0;
                 data.keywords.forEach(keyword => {
                     rows[itr++] = "<tr>"
+                    rows[itr++] = "<td>"
+                        + "<a class='edit-kword' data-kid='" + keyword.keyword_id + "' href='#'><i class='fa fa-edit'></i></a>"
+                        + "<a class='del-kword' data-kid='" + keyword.keyword_id + "' href='#'><i class='fa fa-trash'></i></a>"
+                        + "</td>"
                     rows[itr++] = "<td>" + keyword.keywords + "</td>"
                     rows[itr++] = "</tr>"
                 });
 
                 $('table tbody#keywordTableBody').html(rows.join())
+                deleteKeyword()
             } else {
                 alert('No Data')
             }
         })
     }
     getKeywords();
+
+    const deleteKeyword = function () {
+        $('a.del-kword').unbind('click').click(function () {
+            let c = confirm("Are you sure do you want to remove this keyword?")
+            if (c) {
+                let id = $(this).data('kid')
+                $.post('api/delete_keyword.php', { id }, function (d) {
+                    alert('Keyword is successfully removed')
+                    getKeywords();
+                })
+            }
+        });
+    }
 })
