@@ -1,6 +1,10 @@
-.edit-kword i,
-.del-kword i {
+.edit-kword i {
     color: #ffffff; /* White color for the icons */
+    padding: 5px; /* Adjust the padding as needed */
+}
+
+.del-kword i {
+    color: #b53939; /* White color for the icons */
     padding: 5px; /* Adjust the padding as needed */
 }
 
@@ -19,7 +23,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    background: #056c08;
+    background: #0a860f;
     color: #ffffff; /* White text color */
   }
   
