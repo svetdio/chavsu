@@ -1,11 +1,20 @@
 .edit-kword i {
-  color: #ffffff; /* White color for the icons */
+  background-color: #ffffff;
+  border-radius: 2px; /* Optional: Add rounded corners */
+  color: #000000; /* White color for the icons */
   padding: 5px; /* Adjust the padding as needed */
 }
 
 .del-kword i {
+  background-color: #ffffff;
+  border-radius: 2px; /* Optional: Add rounded corners */
   color: #d50303; /* White color for the icons */
   padding: 5px; /* Adjust the padding as needed */
+}
+
+.edit-kword i:hover,
+.del-kword i:hover {
+  background-color: #01a701; /* Dark green background color for action icons on hover */
 }
 
 /* Additional styling for better alignment */
