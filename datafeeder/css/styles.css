@@ -1,3 +1,20 @@
+.edit-kword i,
+.del-kword i {
+    color: #ffffff; /* White color for the icons */
+    padding: 5px; /* Adjust the padding as needed */
+}
+
+/* Additional styling for better alignment */
+td {
+    text-align: center; /* Center align the content in the cells */
+}
+
+a.edit-kword,
+a.del-kword {
+    display: inline-block; /* Make the anchor tags block-level for better spacing */
+    margin: 5px; /* Add some margin around the icons */
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -91,7 +108,7 @@ body {
 
   tr:nth-child(even) {
     color: #000000;
-    background-color: #3ddd4d;
+    background-color: #08b119;
   }
   
   @media only screen and (max-width: 600px) {
