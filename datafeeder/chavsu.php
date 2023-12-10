@@ -45,6 +45,12 @@
   </div>
   </div>
 
+  <div id="logout" class="logout-btn">
+    <a href="#" onclick="logout()">
+    <i class="fa fa-sign-out" aria-hidden="true"></i> Logout
+    </a>
+  </div>
+
   <!-- Link to external JavaScript file -->
   <script src="js/jquery-3.7.1.min.js"></script>
   <script src="js/script.js"></script>
