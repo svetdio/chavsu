@@ -86,6 +86,12 @@ button:active {
   transform: translateY(4px);
 }
 
+button:disabled {
+  background-color: #595959; /* Grey background color for disabled state */
+  color: #cccccc; /* Light grey text color for disabled state */
+  cursor: not-allowed; /* Change cursor to not-allowed for disabled state */
+}
+
 .table-container {
   float: right;
   width: 50%; /* Adjust the width as needed */
