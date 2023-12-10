@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CHAVSU</title>
+  <title>Main Panel | CHAVSU Data Feeder</title>
   <!-- Link to external CSS file -->
   <link rel="stylesheet" type="text/css" href="css/fontawesome.min.css">
   <link rel="stylesheet" type="text/css" href="css/styles.css">
@@ -43,6 +43,12 @@
       </tbody>
     </table>
   </div>
+  </div>
+
+  <div id="logout" class="logout-btn">
+    <a href="#" onclick="logout()">
+    <i class="fa fa-sign-out" aria-hidden="true"></i> Logout
+    </a>
   </div>
 
   <!-- Link to external JavaScript file -->
