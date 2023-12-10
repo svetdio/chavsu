@@ -1,55 +1,51 @@
 .edit-kword i {
   background-color: #ffffff;
-  border-radius: 2px; /* Optional: Add rounded corners */
-  color: #000000; /* White color for the icons */
-  padding: 5px; /* Adjust the padding as needed */
-  display: inline-block; /* Make the anchor tags block-level for better spacing */
-  margin: 5px; /* Add some margin around the icons */
+  border-radius: 2px;
+  /* Optional: Add rounded corners */
+  color: #000000;
+  /* White color for the icons */
+  padding: 5px;
+  /* Adjust the padding as needed */
+  display: inline-block;
+  /* Make the anchor tags block-level for better spacing */
+  margin: 5px;
+  /* Add some margin around the icons */
 }
 
 .del-kword i {
   background-color: #ffffff;
-  border-radius: 2px; /* Optional: Add rounded corners */
-  color: #d50303; /* White color for the icons */
-  padding: 5px; /* Adjust the padding as needed */
-  display: inline-block; /* Make the anchor tags block-level for better spacing */
-  margin: 5px; /* Add some margin around the icons */
+  border-radius: 2px;
+  /* Optional: Add rounded corners */
+  color: #d50303;
+  /* White color for the icons */
+  padding: 5px;
+  /* Adjust the padding as needed */
+  display: inline-block;
+  /* Make the anchor tags block-level for better spacing */
+  margin: 5px;
+  /* Add some margin around the icons */
 }
 
-.edit-kword i:hover,
-.del-kword i:hover {
-  background-color: #01a701; /* Dark green background color for action icons on hover */
-}
-
-/* Additional styling for better alignment */
 td {
-  text-align: center; /* Center align the content in the cells */
+  text-align: center;
+  /* Center align the content in the cells */
 }
 
 body {
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
-  background: #0a860f;
-  color: #ffffff; /* White text color */
-}
-
-.container {
-  max-width: 100%;
-  margin: 100px; /* Adjusted margin to push the container to the left */
-  padding: 20px;
-  background-color: #ffffff; /* White container background color */
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  text-align: left; /* Align text to the left */
-  float: left;
+  /* background: #0a860f; */
+  /* color: #ffffff;*/
 }
 
 h1 {
   text-align: center;
   color: #026008;
-  font-family: "Century Gothic", sans-serif; /* Century Gothic font style */
-  font-weight: bold; /* Bold text */
+  font-family: "Century Gothic", sans-serif;
+  /* Century Gothic font style */
+  font-weight: bold;
+  /* Bold text */
 }
 
 label {
@@ -60,80 +56,46 @@ label {
 }
 
 textarea {
-  width: calc(100% - 20px); /* Adjusted width for textarea to account for padding */
+  width: calc(100% - 20px);
+  /* Adjusted width for textarea to account for padding */
   padding: 10px;
   margin-bottom: 30px;
   box-sizing: border-box;
-  font-family: inherit; /* Inherit font-family from the container */  
+  font-family: inherit;
+  /* Inherit font-family from the container */
 }
 
 textarea {
-  height: 70px; /* Set the fixed height for the textarea */
-  resize: none; /* Disable textarea resizing */
-}
-
-button {
-  background-color: #006400; /* Dark green button background color */
-  color: #ffffff; /* Button text color */
-  padding: 1em 2em; /* Responsive padding */
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  margin: 0 auto; /* Center the button horizontally */
-  display: block; /* Ensure block-level display for vertical centering */
-  font-size: 16px; /* Responsive font size */
-}
-
-button:hover {
-  background-color: #004d00; 
-}
-
-button:active {
-  background-color: #032e03;
-  transform: translateY(4px);
+  height: 70px;
+  /* Set the fixed height for the textarea */
+  resize: none;
+  /* Disable textarea resizing */
 }
 
 button:disabled {
-  background-color: #999999; 
-  color: #cccccc; 
-  cursor: not-allowed; 
+  cursor: not-allowed;
   transform: none;
 }
 
 .table-container {
   float: right;
-  width: 50%; /* Adjust the width as needed */
-  margin-top: 50px; /* Adjust the margin as needed */
+  width: 50%;
+  /* Adjust the width as needed */
+  margin-top: 50px;
+  /* Adjust the margin as needed */
 }
 
-table {
+/* table {
   width: 100%;
-  max-width: 80%; /* Set the maximum width for the table */
-  margin: 0 auto; /* Center the table within the .table-container */
+  max-width: 80%;
+  margin: 0 auto;
   border-collapse: collapse;
   margin-top: 20px;
-}
+} */
 
 caption {
   font-size: 1.2em;
   margin-bottom: 10px;
-}
-
-th, td {
-  border: 2px solid #dddddd;
-  text-align: left;
-  padding: 8px;
-}
-
-th {
-  background-color: #006400; /* Dark green table header background color */
-  color: #ffffff; /* White text color for table header */
-  text-align: center; /* Center the text in th */
-}
-
-tr:nth-child(even) {
-  color: #000000;
-  background-color: #08b119;
 }
 
 #logout {
@@ -143,26 +105,32 @@ tr:nth-child(even) {
 }
 
 .logout-btn {
-  background-color: #006400; /* Dark green button background color */
-  color: #ffffff; /* Button text color */
+  background-color: #006400;
+  /* Dark green button background color */
+  color: #ffffff;
+  /* Button text color */
   padding: 10px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
   display: inline-block;
-  text-decoration: none; /* Remove underline from the link */
+  text-decoration: none;
+  /* Remove underline from the link */
 }
 
 .logout-btn:hover {
-  background-color: #004d00; /* Dark green button background color on hover */
+  background-color: #004d00;
+  /* Dark green button background color on hover */
 }
 
 /* Style the SVG icon */
 .logout-btn svg {
   width: 30px;
   height: 30px;
-  fill: rgb(255, 255, 255); /* SVG icon fill color */
-  margin-right: 5px; /* Adjust margin as needed */
+  fill: rgb(255, 255, 255);
+  /* SVG icon fill color */
+  margin-right: 5px;
+  /* Adjust margin as needed */
 }
 
 @media only screen and (max-width: 600px) {

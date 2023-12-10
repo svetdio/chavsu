@@ -30,14 +30,20 @@ $(function () {
                 data.keywords.forEach(keyword => {
                     rows[itr++] = "<tr>"
                     rows[itr++] = "<td>"
-                        + "<a class='edit-kword' data-kid='" + keyword.keyword_id + "' href='#'><i class='fa fa-edit'></i></a>"
+                        + "<a class='edit-kword js-modal-trigger' data-target='upd_kwords_form' data-kid='" + keyword.keyword_id + "' href='#'><i class='fa fa-edit'></i></a>"
                         + "<a class='del-kword' data-kid='" + keyword.keyword_id + "' href='#'><i class='fa fa-trash'></i></a>"
                         + "</td>"
+                    rows[itr++] = "<td>" + keyword.keywords + "</td>"
                     rows[itr++] = "<td>" + keyword.keywords + "</td>"
                     rows[itr++] = "</tr>"
                 });
 
-                $('table tbody#keywordTableBody').html(rows.join())
+                $('table tbody#keywordTableBody').html(rows.join());
+
+                createModal();
+                $('#keyword-tbl').DataTable();
+
+                editKeyword(data.keywords)
                 deleteKeyword()
             } else {
                 alert('No Data')
@@ -55,6 +61,68 @@ $(function () {
                     alert('Keyword is successfully removed')
                     getKeywords();
                 })
+            }
+        });
+    }
+
+    const editKeyword = function (data) {
+        $('a.edit-kword').unbind('click').click(function () {
+            let id = $(this).data('kid')
+            let k = data.find((f) => f.keyword_id == id);
+
+            $('#upd_kwords_form textarea#keywords').val(k.keywords);
+
+            $('#upd_keyword').on('click', function (e) {
+                e.preventDefault();
+
+                let kword = $('#upd_kwords_form textarea#keywords').val();
+
+                $.post('api/update_keyword.php', { id, kword }, function (d) {
+                    alert('Keyword is successfully updated')
+                    getKeywords();
+                })
+            });
+        });
+    }
+
+    function openModal($el) {
+        $el.classList.add('is-active');
+    }
+
+    function closeModal($el) {
+        $el.classList.remove('is-active');
+    }
+
+    function closeAllModals() {
+        (document.querySelectorAll('.modal') || []).forEach(($modal) => {
+            closeModal($modal);
+        });
+    }
+
+    function createModal() {
+        // Add a click event on buttons to open a specific modal
+        (document.querySelectorAll('.js-modal-trigger') || []).forEach(($trigger) => {
+            const modal = $trigger.dataset.target;
+            const $target = document.getElementById(modal);
+
+            $trigger.addEventListener('click', () => {
+                openModal($target);
+            });
+        });
+
+        // Add a click event on various child elements to close the parent modal
+        (document.querySelectorAll('.modal-background, .modal-close, .modal-card-head .delete, .modal-card-foot .button') || []).forEach(($close) => {
+            const $target = $close.closest('.modal');
+
+            $close.addEventListener('click', () => {
+                closeModal($target);
+            });
+        });
+
+        // Add a keyboard event to close all modals
+        document.addEventListener('keydown', (event) => {
+            if (event.code === 'Escape') {
+                closeAllModals();
             }
         });
     }
