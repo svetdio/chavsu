@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login | CHAVSU Data Feeder</title>
     <link rel="stylesheet" type="text/css" href="css/fontawesome.min.css">
-    <link rel="stylesheet" href="css/styles1.css">
+    <link rel="stylesheet" href="css/login.css">
 </head>
 <body>
     <div class="login-container">
@@ -17,11 +17,11 @@
             <label for="password">Password:</label>
             <input type="password" id="password" name="password" required>
 
-            <button type="button" onclick="login()">Login</button>
+            <button type="button" onclick="login()">LOGIN</button>
         </form>
         <p id="errorMessage"></p>
     </div>
 
-    <script src="js/script1.js"></script>
+    <script src="js/login.js"></script>
 </body>
 </html>
