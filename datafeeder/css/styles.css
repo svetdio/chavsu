@@ -3,6 +3,8 @@
   border-radius: 2px; /* Optional: Add rounded corners */
   color: #000000; /* White color for the icons */
   padding: 5px; /* Adjust the padding as needed */
+  display: inline-block; /* Make the anchor tags block-level for better spacing */
+  margin: 5px; /* Add some margin around the icons */
 }
 
 .del-kword i {
@@ -10,6 +12,8 @@
   border-radius: 2px; /* Optional: Add rounded corners */
   color: #d50303; /* White color for the icons */
   padding: 5px; /* Adjust the padding as needed */
+  display: inline-block; /* Make the anchor tags block-level for better spacing */
+  margin: 5px; /* Add some margin around the icons */
 }
 
 .edit-kword i:hover,
@@ -20,12 +24,6 @@
 /* Additional styling for better alignment */
 td {
   text-align: center; /* Center align the content in the cells */
-}
-
-a.edit-kword,
-a.del-kword {
-  display: inline-block; /* Make the anchor tags block-level for better spacing */
-  margin: 5px; /* Add some margin around the icons */
 }
 
 body {
