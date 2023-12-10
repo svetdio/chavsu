@@ -4,7 +4,7 @@
 }
 
 .del-kword i {
-  color: #b53939; /* White color for the icons */
+  color: #d50303; /* White color for the icons */
   padding: 5px; /* Adjust the padding as needed */
 }
 
@@ -78,7 +78,7 @@ button {
 }
 
 button:hover {
-  background-color: #004d00; /* Dark green button background color on hover */
+  background-color: #004d00; 
 }
 
 button:active {
@@ -87,9 +87,10 @@ button:active {
 }
 
 button:disabled {
-  background-color: #595959; /* Grey background color for disabled state */
-  color: #cccccc; /* Light grey text color for disabled state */
-  cursor: not-allowed; /* Change cursor to not-allowed for disabled state */
+  background-color: #999999; 
+  color: #cccccc; 
+  cursor: not-allowed; 
+  transform: none;
 }
 
 .table-container {
