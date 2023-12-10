@@ -1,103 +1,146 @@
-body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    background: #056c08;
-    color: #ffffff; /* White text color */
-  }
-  
-  .container {
-    max-width: 600px;
-    margin: 50px; /* Adjusted margin to push the container to the left */
-    padding: 20px;
-    background-color: #ffffff; /* White container background color */
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    float: left;
-  }
-  
-  h1 {
-    text-align: center;
-    color: #026008;
-    font-family: "Century Gothic", sans-serif; /* Century Gothic font style */
-    font-weight: bold; /* Bold text */
-  }
-  
-  textarea {
-    width: 100%; /* Make both textarea and input 100% width */
-    padding: 10px;
-    margin-bottom: 10px;
-    box-sizing: border-box;
-    font-family: inherit; /* Inherit font-family from the container */  
-  }
-  
-  textarea {
-    height: 70px; /* Set the fixed height for the textarea */
-    resize: none; /* Disable textarea resizing */
-  }
-
-  button {
-    background-color: #006400; /* Dark green button background color */
-    color: #ffffff; /* Button text color */
-    padding: 1em 2em; /* Responsive padding */
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    margin: 0 auto; /* Center the button horizontally */
-    display: inline-block; /* Ensure block-level display for vertical centering */
-    font-size: 16px; /* Responsive font size */
-  }
-  
-  button:hover {
-    background-color: #004d00; /* Dark green button background color on hover */
-  }
-
-  button:active {
-    background-color: #032e03;
-    transform: translateY(4px);
-  }
-
-  .table-container {
-    float: right;
-    width: 50%; /* Adjust the width as needed */
-    margin-top: 50px; /* Adjust the margin as needed */
+.edit-kword i {
+  background-color: #ffffff;
+  border-radius: 2px; /* Optional: Add rounded corners */
+  color: #000000; /* White color for the icons */
+  padding: 5px; /* Adjust the padding as needed */
 }
 
-  table {
-    width: 100%;
-    max-width: 80%; /* Set the maximum width for the table */
-    margin: 0 auto; /* Center the table within the .table-container */
-    border-collapse: collapse;
-    margin-top: 20px;
-  }
-  
-  caption {
-    font-size: 1.2em;
-    margin-bottom: 10px;
-  }
-  
-  th, td {
-    border: 2px solid #dddddd;
-    text-align: left;
-    padding: 8px;
-  }
-  
-  th {
-    background-color: #006400; /* Dark green table header background color */
-    color: #ffffff; /* White text color for table header */
-    text-align: center; /* Center the text in th */
-  }
+.del-kword i {
+  background-color: #ffffff;
+  border-radius: 2px; /* Optional: Add rounded corners */
+  color: #d50303; /* White color for the icons */
+  padding: 5px; /* Adjust the padding as needed */
+}
 
-  tr:nth-child(even) {
-    color: #000000;
-    background-color: #3ddd4d;
+.edit-kword i:hover,
+.del-kword i:hover {
+  background-color: #01a701; /* Dark green background color for action icons on hover */
+}
+
+/* Additional styling for better alignment */
+td {
+  text-align: center; /* Center align the content in the cells */
+}
+
+a.edit-kword,
+a.del-kword {
+  display: inline-block; /* Make the anchor tags block-level for better spacing */
+  margin: 5px; /* Add some margin around the icons */
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background: #0a860f;
+  color: #ffffff; /* White text color */
+}
+
+.container {
+  max-width: 100%;
+  margin: 100px; /* Adjusted margin to push the container to the left */
+  padding: 20px;
+  background-color: #ffffff; /* White container background color */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: left; /* Align text to the left */
+  float: left;
+}
+
+h1 {
+  text-align: center;
+  color: #026008;
+  font-family: "Century Gothic", sans-serif; /* Century Gothic font style */
+  font-weight: bold; /* Bold text */
+}
+
+label {
+  color: #000000;
+  display: block;
+  font-size: 13px;
+  margin-bottom: 8px;
+}
+
+textarea {
+  width: calc(100% - 20px); /* Adjusted width for textarea to account for padding */
+  padding: 10px;
+  margin-bottom: 30px;
+  box-sizing: border-box;
+  font-family: inherit; /* Inherit font-family from the container */  
+}
+
+textarea {
+  height: 70px; /* Set the fixed height for the textarea */
+  resize: none; /* Disable textarea resizing */
+}
+
+button {
+  background-color: #006400; /* Dark green button background color */
+  color: #ffffff; /* Button text color */
+  padding: 1em 2em; /* Responsive padding */
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 0 auto; /* Center the button horizontally */
+  display: block; /* Ensure block-level display for vertical centering */
+  font-size: 16px; /* Responsive font size */
+}
+
+button:hover {
+  background-color: #004d00; 
+}
+
+button:active {
+  background-color: #032e03;
+  transform: translateY(4px);
+}
+
+button:disabled {
+  background-color: #999999; 
+  color: #cccccc; 
+  cursor: not-allowed; 
+  transform: none;
+}
+
+.table-container {
+  float: right;
+  width: 50%; /* Adjust the width as needed */
+  margin-top: 50px; /* Adjust the margin as needed */
+}
+
+table {
+  width: 100%;
+  max-width: 80%; /* Set the maximum width for the table */
+  margin: 0 auto; /* Center the table within the .table-container */
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+caption {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+th, td {
+  border: 2px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+th {
+  background-color: #006400; /* Dark green table header background color */
+  color: #ffffff; /* White text color for table header */
+  text-align: center; /* Center the text in th */
+}
+
+tr:nth-child(even) {
+  color: #000000;
+  background-color: #08b119;
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    margin: 20px;
+    padding: 10px;
   }
-  
-  @media only screen and (max-width: 600px) {
-    .container {
-      margin: 20px;
-      padding: 10px;
-    }
-  }
-  
+}

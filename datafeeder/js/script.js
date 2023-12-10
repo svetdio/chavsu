@@ -8,7 +8,7 @@ $(function () {
     // Add an event listener to the text area
     keywordsTextarea.addEventListener('input', function () {
         // Enable the save button if the text area has input, otherwise disable it
-        saveButton.disabled = keywordsTextarea.value.trim() === '';
+        saveButton.disabled = keywordsTextarea.value == '';
     });
 
     saveButton.addEventListener('click', function () {

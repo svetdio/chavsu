@@ -16,11 +16,11 @@
     <h1>CHAVSU - IMUS CAMPUS</h1>
 
     <!-- Text box for keywords -->
-    <!--<label for="keywords">Keywords:</label>-->
+    <label id="keyw"for="keywords">Keywords:</label>
     <textarea id="keywords" name="keywords" placeholder="Enter keywords..."></textarea>
 
     <!-- Text box for response -->
-    <!--<label for="response">Response:</label>-->
+    <label id="resp" for="response">Response:</label>
     <textarea id="response" name="response" placeholder="Enter response..."></textarea>
 
     <!-- Save button -->
