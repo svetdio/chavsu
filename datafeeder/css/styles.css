@@ -105,33 +105,13 @@ caption {
 }
 
 .logout-btn {
-  background-color: #006400;
-  /* Dark green button background color */
-  color: #ffffff;
-  /* Button text color */
+  background-color: #ffffff;
   padding: 10px;
-  border: none;
-  border-radius: 4px;
   cursor: pointer;
   display: inline-block;
   text-decoration: none;
-  /* Remove underline from the link */
 }
 
-.logout-btn:hover {
-  background-color: #004d00;
-  /* Dark green button background color on hover */
-}
-
-/* Style the SVG icon */
-.logout-btn svg {
-  width: 30px;
-  height: 30px;
-  fill: rgb(255, 255, 255);
-  /* SVG icon fill color */
-  margin-right: 5px;
-  /* Adjust margin as needed */
-}
 
 @media only screen and (max-width: 600px) {
   .container {

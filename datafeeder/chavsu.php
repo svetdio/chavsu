@@ -86,8 +86,8 @@
   </div>
 
   <div id="logout" class="logout-btn">
-    <a href="#" onclick="logout()">
-      <i class="fa fa-sign-out" aria-hidden="true"></i> Logout
+    <a class="button" href="#" onclick="logout()" style="color: #ff0000">
+      <i class="fa fa-sign-out" aria-hidden="true" style="color: #ff0000; font-size: 20px;"></i>
     </a>
   </div>
 
