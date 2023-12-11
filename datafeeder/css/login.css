@@ -5,13 +5,14 @@ body {
     justify-content: center;
     height: 100vh;
     margin: 0;
-    background-color: #056c08;
+    background-color: #eceaea;
 }
 
 .login-container {
     background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
+    border: #013403;
+    padding: 30px;
+    border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -33,7 +34,7 @@ input {
 
 button {
     padding: 10px;
-    background-color: #056c08;
+    background-color: #48c78e;
     color: #fff;
     border: none;
     border-radius: 4px;
@@ -41,7 +42,7 @@ button {
 }
 
 button:hover {
-    background-color:#013403;
+    background-color:#2fa771;
 }
 
 #errorMessage {
