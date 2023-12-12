@@ -1,5 +1,9 @@
 $(function () {
-    console.log('asdf');
+    if (typeof localStorage['chavsu_admin'] == 'undefined') {
+        alert("Please log in");
+        window.location = 'login.php';
+    }
+
     const keywordsTextarea = document.getElementById('keywords');
     const responseTextarea = document.getElementById('response');
     const saveButton = document.getElementById('saveButton');
@@ -136,4 +140,11 @@ $(function () {
             }
         });
     }
+    $('#logout').unbind('click').click(function () {
+        let c = confirm("Are you sure do you want to log out?")
+        if (c) {
+            localStorage.removeItem('chavsu_admin')
+            window.location = 'login.php';
+        }
+    });
 })
