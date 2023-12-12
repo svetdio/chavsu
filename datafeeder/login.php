@@ -14,6 +14,8 @@
   <script src="js/jquery-3.7.1.min.js"></script>
   <script src="js/datatables.js"></script>
   <script src="js/login.js"></script>
+
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 
 <body>

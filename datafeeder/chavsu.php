@@ -15,6 +15,8 @@
   <script src="js/jquery-3.7.1.min.js"></script>
   <script src="js/datatables.js"></script>
   <script src="js/script.js"></script>
+
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 
 <body>
