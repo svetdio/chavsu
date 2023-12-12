@@ -1,15 +1,41 @@
 <?php
-// Simulated user data (replace with your actual user data and database connection)
-$validUser = ['username' => 'admin', 'password' => 'password'];
+$host = 'localhost';
+$database = 'chavsu_db';
+$user = 'root';
+$password = '';
+
+$db = new mysqli($host, $user, $password, $database);
 
 $username = $_POST['username'];
 $password = $_POST['password'];
 
-if ($username === $validUser['username'] && $password === $validUser['password']) {
-    // Successful login
-    echo json_encode(['success' => true]);
+$query = "
+    SELECT 
+        * 
+    FROM admin 
+    WHERE
+    username = '$username'
+";
+
+$stmt = $db->query($query);
+$admin = $stmt->fetch_assoc(); // fetch data   
+
+if (is_array($admin) && count($admin) > 0) {
+    if ($admin['pass'] == $password) {
+        $_SESSION['login_details'] = $admin;
+        echo json_encode($admin);
+    } else {
+        echo json_encode(array('error' => "Incorrect Username or Password"));
+    }
 } else {
-    // Invalid credentials
-    echo json_encode(['success' => false]);
+    echo json_encode(array('error' => "Username does not exist"));
 }
+
+// if ($username === $validUser['username'] && $password === $validUser['password']) {
+//     // Successful login
+//     echo json_encode(['success' => true]);
+// } else {
+//     // Invalid credentials
+//     echo json_encode(['success' => false]);
+// }
 ?>

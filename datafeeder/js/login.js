@@ -1,25 +1,27 @@
-function login() {
-    const username = document.getElementById('username').value;
-    const password = document.getElementById('password').value;
-    const errorMessage = document.getElementById('errorMessage');
+$(function () {
+    if (typeof localStorage['chavsu_admin'] !== 'undefined') {
+        alert("You are already logged-in");
+        window.location = 'chavsu.php';
+    }
 
-    // You should perform proper validation before sending data to the server
+    $('#login').on("click", function (e) {
+        e.preventDefault();
+        let username = $('#username').val();
+        let password = $('#password').val();
 
-    fetch('api/login.php', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/x-www-form-urlencoded',
-        },
-        body: `username=${encodeURIComponent(username)}&password=${encodeURIComponent(password)}`,
-    })
-    .then(response => response.json())
-    .then(data => {
-        if (data.success) {
-            // Redirect to chavsu.php upon successful login
-            window.location.href = 'chavsu.php';
+        if (username == "" || password == "") {
+            alert("Please input username or password!");
         } else {
-            errorMessage.textContent = 'Invalid username or password';
+            $.post('api/login.php', { username, password }, function (res) {
+                let data = JSON.parse(res)
+                if (typeof data.error === "undefined") {
+                    localStorage['chavsu_admin'] = res;
+                    alert("Log in Successful!");
+                        window.location = 'chavsu.php';
+                } else {
+                    alert(data.error);
+                }
+            });
         }
     })
-    .catch(error => console.error('Error during login:', error));
-}
+});

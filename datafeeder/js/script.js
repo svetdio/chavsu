@@ -1,5 +1,11 @@
 $(function () {
+    if (typeof localStorage['chavsu_admin'] == 'undefined') {
+        alert("Please log in");
+        window.location = 'login.php';
+    }
+
     const keywordsTextarea = document.getElementById('keywords');
+    const responseTextarea = document.getElementById('response');
     const saveButton = document.getElementById('saveButton');
 
     // Disable save button initially
@@ -8,14 +14,20 @@ $(function () {
     // Add an event listener to the text area
     keywordsTextarea.addEventListener('input', function () {
         // Enable the save button if the text area has input, otherwise disable it
-        saveButton.disabled = keywordsTextarea.value == '';
+        saveButton.disabled = keywordsTextarea.value == '' || responseTextarea.value == '';
+    });
+
+    responseTextarea.addEventListener('input', function () {
+        // Enable the save button if the text area has input, otherwise disable it
+        saveButton.disabled = keywordsTextarea.value == '' || responseTextarea.value == '';
     });
 
     saveButton.addEventListener('click', function () {
         // Replace this with your save functionality
         let k = $('#keywords').val();
+        let r = $('#response').val();
 
-        $.post('api/save_keyword.php', { k }, function (d) {
+        $.post('api/save_keyword.php', { k, r }, function (d) {
             getKeywords();
         })
     });
@@ -30,11 +42,11 @@ $(function () {
                 data.keywords.forEach(keyword => {
                     rows[itr++] = "<tr>"
                     rows[itr++] = "<td>"
-                        + "<a class='edit-kword js-modal-trigger' data-target='upd_kwords_form' data-kid='" + keyword.keyword_id + "' href='#'><i class='fa fa-edit'></i></a>"
-                        + "<a class='del-kword' data-kid='" + keyword.keyword_id + "' href='#'><i class='fa fa-trash'></i></a>"
+                        + "<a class='edit-kword js-modal-trigger' data-target='upd_kwords_form' data-kid='" + keyword.id + "' href='#'><i class='fa fa-edit'></i></a>"
+                        + "<a class='del-kword' data-kid='" + keyword.id + "' href='#'><i class='fa fa-trash'></i></a>"
                         + "</td>"
                     rows[itr++] = "<td>" + keyword.keywords + "</td>"
-                    rows[itr++] = "<td>" + keyword.keywords + "</td>"
+                    rows[itr++] = "<td>" + keyword.response + "</td>"
                     rows[itr++] = "</tr>"
                 });
 
@@ -68,16 +80,18 @@ $(function () {
     const editKeyword = function (data) {
         $('a.edit-kword').unbind('click').click(function () {
             let id = $(this).data('kid')
-            let k = data.find((f) => f.keyword_id == id);
+            let k = data.find((f) => f.id == id);
 
             $('#upd_kwords_form textarea#keywords').val(k.keywords);
+            $('#upd_kwords_form textarea#response').val(k.response);
 
             $('#upd_keyword').on('click', function (e) {
                 e.preventDefault();
 
                 let kword = $('#upd_kwords_form textarea#keywords').val();
+                let resp = $('#upd_kwords_form textarea#response').val();
 
-                $.post('api/update_keyword.php', { id, kword }, function (d) {
+                $.post('api/update_keyword.php', { id, kword, resp }, function (d) {
                     alert('Keyword is successfully updated')
                     getKeywords();
                 })
@@ -126,4 +140,11 @@ $(function () {
             }
         });
     }
+    $('#logout').unbind('click').click(function () {
+        let c = confirm("Are you sure do you want to log out?")
+        if (c) {
+            localStorage.removeItem('chavsu_admin')
+            window.location = 'login.php';
+        }
+    });
 })

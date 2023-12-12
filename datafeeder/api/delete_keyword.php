@@ -8,7 +8,7 @@ $conn = new mysqli($host, $user, $password, $database);
 
 $kid = $_POST['id'];
 
-$del_query = "DELETE FROM keywords WHERE keyword_id = $kid";
+$del_query = "DELETE FROM keywords_response WHERE id = $kid";
 
 if (!$conn->query($del_query)) {
     echo json_encode(['error' => 'Error deleting keywords']);

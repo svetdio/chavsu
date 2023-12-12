@@ -10,17 +10,9 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-// $keywords = $_POST['keywords'];
-
-// You should perform proper validation and sanitization here before inserting into the database
-
-// For simplicity, let's assume all keywords have the same category
-$category = 'Default Category';
-
-// Retrieve the updated list of keywords and send it back to the client
 $updatedKeywords = array();
 
-$selectQuery = "SELECT * FROM Keywords";
+$selectQuery = "SELECT * FROM keywords_response";
 $selectResult = $conn->query($selectQuery);
 
 while ($row = $selectResult->fetch_assoc()) {
@@ -30,4 +22,3 @@ while ($row = $selectResult->fetch_assoc()) {
 echo json_encode(['success' => true, 'keywords' => $updatedKeywords]);
 
 $conn->close();
-?>
