@@ -1,242 +1,127 @@
-a,
-button,
-input,
-select,
-h1,
-h2,
-h3,
-h4,
-h5,
-* {
-  margin: 0;
-  padding: 0;
-  border: none;
-  text-decoration: none;
-  appearance: none;
-  background: none;
-
-  -webkit-font-smoothing: antialiased;
-}
-
-.log-in-dashboard,
-.log-in-dashboard * {
-  box-sizing: border-box;
-}
-
-.log-in-dashboard {
-  background: #ffffff url('your-image.jpg') center/cover no-repeat; /* Updated background properties */
-  border-style: solid;
-  border-color: #000000;
-  border-width: 1px;
-  width: 100%; /* Use percentage for responsiveness */
-  height: 100vh; /* Use viewport height for responsiveness */
-  position: relative;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.web {
-  background: #064635;
-  width: 100%; /* Use percentage for responsiveness */
-  height: 65px;
-  position: absolute;
-  left: 0;
-  top: 0;
+body {
+    background-image: url("images/background.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    background-color: #eceaea;
+    font-family: "CenturyGothic-BoldItalic", sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    flex-direction: column;
 }
 
 .chavsu-head {
-  width: 236px;
-  height: 44px;
-  position: absolute;
-  left: 124px;
-  top: 10px;
+    max-width: 100%; /* Adjust the maximum width as needed */
+    height: auto;
+    position: absolute;
+    left: 1%; /* Adjust the left position percentage as needed */
+    top: 1%; /* Adjust the top position percentage as needed */
 }
+
 .help {
-  width: 29px;
-  height: 30px;
-  position: absolute;
-  left: 1400px;
-  top: 16px;
+    width: 29px;
+    height: 30px;
+    position: absolute;
+    right: 1%;
+    top: 1%;
 }
 
-.help2 {
-  color: #ffffff;
-  text-align: left;
-  font-family: "CenturyGothic-Bold", sans-serif;
-  font-size: 20px;
-  font-weight: 700;
-  position: absolute;
-  left: 14px;
-  top: 20px;
-  width: 101px;
-  height: 25px;
-}
-
-.bg {
-  background: url('i-must-app-3-1.png') center/cover no-repeat; /* Updated background properties */
-  width: 100%; /* Use percentage for responsiveness */
-  height: 100%; /* Use percentage for responsiveness */
-  position: absolute;
-  left: 0;
-  top: 65px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.forgot-pass {
-  color: #000000;
-  text-align: left;
-  font-family: "CenturyGothic-Italic", sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-  font-style: italic;
-  position: absolute;
-  left: 350px;
-  top: 442px;
-  width: 195px;
-  height: 19px;
-  display: flex;
-  align-items: flex-end;
-  justify-content: flex-start;
-}
-.forgot-pass2 {
-  color: #000000;
-  text-align: left;
-  font-family: "-", sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-  position: absolute;
-  left: 139px;
-  top: 647px;
-  width: 341px;
-  height: 20px;
-  display: flex;
-  align-items: flex-end;
-  justify-content: flex-start;
-}
-.forgot-pass-2-span {
-  color: #000000;
-  font-family: "CenturyGothic-Italic", sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-  font-style: italic;
-}
-.forgot-pass-2-span2 {
-  color: #000000;
-  font-family: "CenturyGothic-BoldItalic", sans-serif;
-  font-size: 16px;
-  font-weight: 700;
-  font-style: italic;
+.login-container {
+    max-width: 100%;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .log {
-  width: 38px;
-  height: 40px;
-  position: absolute;
-  left: 114px;
-  top: 129px;
-}
-.log-in-yacc {
-  color: #000000;
-  text-align: left;
-  font-family: "CenturyGothic-BoldItalic", sans-serif;
-  font-size: 24px;
-  font-weight: 700;
-  font-style: italic;
-  position: absolute;
-  left: 152px;
-  top: 133px;
-  width: 335px;
-  height: 32px;
-}
-.cvsu-email {
-  color: #000000;
-  position: absolute;
-  text-align: left;
-  font-family: "CenturyGothic-Italic", sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-  font-style: italic;
-  left: 131px;
-  top: 212px;
-  width: 133px;
-  height: 28px;
+    width: 30px; /* Set the width of the log.png image */
+    height: 30px; /* Set the height of the log.png image */
+    margin-right: 0px; /* Adjust margin as needed */
 }
 
-.email {
-  position: absolute;
-  left: 132px;
-  top: 240px;
-  width: 358px;
-  height: 54px;
-  overflow: visible;
-  background-color: white;
-  padding: 8px;
+h2 {
+    color: #000000;
+    font-family: "CenturyGothic-BoldItalic", sans-serif;
+    font-style: italic;
+    margin-bottom: 50px;
 }
 
+.cvsu-email,
 .password {
-  color: #000000;
-  position: absolute;
-  text-align: left;
-  font-family: "CenturyGothic-Italic", sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-  font-style: italic;
-  left: 131px; 
-  top: 353px;
-  width: 133px;
-  height: 28px;
+    color: #000000;
+    text-align: left;
+    font-family: "CenturyGothic-Italic", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    font-style: italic;
+    width: 133px;
+    height: 28px;
 }
 
-.pass {
-  position: absolute;
-  width: 358px;
-  height: 54px;
-  left: 132px; 
-  top: 381px;
-  overflow: visible;
-  background-color: white;
-  padding: 8px;
+form {
+    display: flex;
+    flex-direction: column;
+    width: 100%; /* Full width for responsiveness */
 }
 
-
-
-.log-in {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 150px;
-  height: 50px;
-  background-color: orange;
-  position: absolute;
-  left: 129px;
-  top: 504px;
-  overflow: visible;
-  cursor: pointer;
-  border-radius: 4px;
-  color: #000000;
-  text-align: center;
-  font-family: "CenturyGothic-Italic", sans-serif;
-  font-size: 20px;
-  font-weight: 400;
-  font-style: italic;
-  position: absolute;
+label {
+    margin-bottom: 5px;
 }
 
-.log-in:hover {
-  background-color:rgb(194, 134, 24);
+input {
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
 }
 
+.forgot-pass {
+    color: #000000;
+    text-align: right; /* Align text to the right */
+    font-family: "CenturyGothic-Italic", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    font-style: italic;
+    width: 100%; /* Full width for responsiveness */
+    margin-top: -17px; /* Adjusted margin */
+}
 
-/* @media only screen and (max-width: 600px) {
-  .container {
-    margin: 20px;
+.register {
+    color: #000000;
+    text-align: left;
+    font-family: "CenturyGothic-Italic", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    font-style: italic;
+    width: 100%; /* Full width for responsiveness */
+    margin-top: 25px;
+
+}
+
+button {
     padding: 10px;
-  }
-} */
+    background-color: orange;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 15px;
+    color: black;
+    font-family: "CenturyGothic-Italic", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+button:hover {
+    background-color:orangered;
+}
+
+#errorMessage {
+    color: #dc3545;
+}
+
