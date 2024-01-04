@@ -41,12 +41,12 @@ body  {
         <div class="forgot-pass"><a href="#" style="color: black;">Forgot password?</a></div>
 
         <button id="login" type="button"><strong>LOG IN</strong></button>
+
       </form>
       <p id="errorMessage"></p>
 
-      <div class="register">Don’t have an account? <strong><a href="#" style="color: black;">Register here</a></strong></div>
+      <div class="register">Don’t have an account? <strong><a href="register.php" style="color: black;">Register here</a></strong></div>
     </div>
   </div>
 </body>
-
 </html>

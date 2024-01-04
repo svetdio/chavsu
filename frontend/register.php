@@ -50,6 +50,11 @@ body  {
       <p id="errorMessage"></p>
     </div>
   </div>
-</body>
 
+    <script>
+        document.getElementById("back").addEventListener("click", function () {
+            window.location.href = "login.php";
+        });
+    </script>
+</body>
 </html>
