@@ -26,7 +26,7 @@ body  {
 </style>    
 
     <img class="chavsu-head" src="images/chavsu-head.png" />
-    <img class="help" src="images/help.png" />
+    <a href="help.php"><img class="help"src="images/help.png"/></a>
 
     <!-- log in form -->
     <div class="login-container">

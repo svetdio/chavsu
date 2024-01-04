@@ -21,14 +21,6 @@ body {
     top: 1%; /* Adjust the top position percentage as needed */
 }
 
-.help {
-    width: 29px;
-    height: 30px;
-    position: absolute;
-    right: 1%;
-    top: 1%;
-}
-
 .login-container {
     max-width: 100%;
     background-color: rgba(255, 255, 255, 0.2);

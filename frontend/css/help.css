@@ -1,0 +1,110 @@
+body {
+    background-image: url("images/background.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    background-color: #eceaea;
+    font-family: "CenturyGothic-BoldItalic", sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+.chavsu-head {
+    max-width: 100%;
+    height: auto;
+    position: absolute;
+    left: 1%;
+    top: 1%;
+}
+
+.chavsu {
+    width: 580px;
+    height: 420px;
+    position: absolute;
+    right: 10%;
+    top: 28%;
+}
+
+#guide {
+    color: #000000;
+    text-align: left;
+    font-family: "CenturyGothic-Italic", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    position: absolute;
+    width: 475px;
+    left: 8%;
+    text-align: justify;
+    margin-top: 1%;
+}
+
+#back {
+    background-color: grey;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 40%;
+    color: black;
+    font-family: "CenturyGothic-Italic", sans-serif;
+    font-size: 18px;
+    font-style: italic;
+    position: absolute;
+    overflow: visible;
+    left: 0%;
+    bottom: -20%;
+}
+
+#back:hover {
+    background-color: rgb(212, 21, 21);
+}
+
+/* Media query for mobile screens in portrait mode */
+@media only screen and (max-width: 599.98px) {
+    #guide,.body {
+        font-size: 16px;
+        width: 90%;
+        left: 5%;
+        top: 30%;
+    }
+    .chavsu {
+        width: 180px;
+        height: 180px;
+        top: 10%;
+        position: absolute;
+
+        
+    }
+    #back {
+        width: 40%; /* Adjusted for better responsiveness */
+        left: 0%;
+        bottom: -20%;
+    }
+}
+
+/* @media only screen and (max-width: 912px) {
+    .chavsu {
+        width: 400px;
+        height: 500px;
+        top: 30%;
+        position: absolute;
+        left: 53%;
+
+
+    }
+
+    #help,
+    #guide {
+        width: 50%;
+        left: 2%;
+        top: 30%;
+    }
+
+    #back {
+        width: 80%;
+    }
+} */
