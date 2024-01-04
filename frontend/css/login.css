@@ -1,0 +1,242 @@
+a,
+button,
+input,
+select,
+h1,
+h2,
+h3,
+h4,
+h5,
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  text-decoration: none;
+  appearance: none;
+  background: none;
+
+  -webkit-font-smoothing: antialiased;
+}
+
+.log-in-dashboard,
+.log-in-dashboard * {
+  box-sizing: border-box;
+}
+
+.log-in-dashboard {
+  background: #ffffff url('your-image.jpg') center/cover no-repeat; /* Updated background properties */
+  border-style: solid;
+  border-color: #000000;
+  border-width: 1px;
+  width: 100%; /* Use percentage for responsiveness */
+  height: 100vh; /* Use viewport height for responsiveness */
+  position: relative;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.web {
+  background: #064635;
+  width: 100%; /* Use percentage for responsiveness */
+  height: 65px;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.chavsu-head {
+  width: 236px;
+  height: 44px;
+  position: absolute;
+  left: 124px;
+  top: 10px;
+}
+.help {
+  width: 29px;
+  height: 30px;
+  position: absolute;
+  left: 1400px;
+  top: 16px;
+}
+
+.help2 {
+  color: #ffffff;
+  text-align: left;
+  font-family: "CenturyGothic-Bold", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  position: absolute;
+  left: 14px;
+  top: 20px;
+  width: 101px;
+  height: 25px;
+}
+
+.bg {
+  background: url('i-must-app-3-1.png') center/cover no-repeat; /* Updated background properties */
+  width: 100%; /* Use percentage for responsiveness */
+  height: 100%; /* Use percentage for responsiveness */
+  position: absolute;
+  left: 0;
+  top: 65px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.forgot-pass {
+  color: #000000;
+  text-align: left;
+  font-family: "CenturyGothic-Italic", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  font-style: italic;
+  position: absolute;
+  left: 350px;
+  top: 442px;
+  width: 195px;
+  height: 19px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+}
+.forgot-pass2 {
+  color: #000000;
+  text-align: left;
+  font-family: "-", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  position: absolute;
+  left: 139px;
+  top: 647px;
+  width: 341px;
+  height: 20px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+}
+.forgot-pass-2-span {
+  color: #000000;
+  font-family: "CenturyGothic-Italic", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  font-style: italic;
+}
+.forgot-pass-2-span2 {
+  color: #000000;
+  font-family: "CenturyGothic-BoldItalic", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.log {
+  width: 38px;
+  height: 40px;
+  position: absolute;
+  left: 114px;
+  top: 129px;
+}
+.log-in-yacc {
+  color: #000000;
+  text-align: left;
+  font-family: "CenturyGothic-BoldItalic", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  font-style: italic;
+  position: absolute;
+  left: 152px;
+  top: 133px;
+  width: 335px;
+  height: 32px;
+}
+.cvsu-email {
+  color: #000000;
+  position: absolute;
+  text-align: left;
+  font-family: "CenturyGothic-Italic", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  font-style: italic;
+  left: 131px;
+  top: 212px;
+  width: 133px;
+  height: 28px;
+}
+
+.email {
+  position: absolute;
+  left: 132px;
+  top: 240px;
+  width: 358px;
+  height: 54px;
+  overflow: visible;
+  background-color: white;
+  padding: 8px;
+}
+
+.password {
+  color: #000000;
+  position: absolute;
+  text-align: left;
+  font-family: "CenturyGothic-Italic", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  font-style: italic;
+  left: 131px; 
+  top: 353px;
+  width: 133px;
+  height: 28px;
+}
+
+.pass {
+  position: absolute;
+  width: 358px;
+  height: 54px;
+  left: 132px; 
+  top: 381px;
+  overflow: visible;
+  background-color: white;
+  padding: 8px;
+}
+
+
+
+.log-in {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 150px;
+  height: 50px;
+  background-color: orange;
+  position: absolute;
+  left: 129px;
+  top: 504px;
+  overflow: visible;
+  cursor: pointer;
+  border-radius: 4px;
+  color: #000000;
+  text-align: center;
+  font-family: "CenturyGothic-Italic", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  font-style: italic;
+  position: absolute;
+}
+
+.log-in:hover {
+  background-color:rgb(194, 134, 24);
+}
+
+
+/* @media only screen and (max-width: 600px) {
+  .container {
+    margin: 20px;
+    padding: 10px;
+  }
+} */
