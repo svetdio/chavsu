@@ -39,13 +39,15 @@ body  {
         <input type="password" id="pass" class="pass" placeholder="Enter your password">
 
         <label for="pass" class="password">Confirm your password</label>
-        <input type="password" id="pass" class="pass" placeholder="Enter your password">
+        <input type="password" id="pass" class="pass" placeholder="Re-enter your password">
 
-        <button id="login" type="button"><strong>LOG IN</strong></button>
+        <div class="button-container">
+            <button id="signin" type="button"><strong>SIGN IN</strong></button>
+            <button id="back" type="button"><strong>BACK</strong></button>
+        </div>
+
       </form>
       <p id="errorMessage"></p>
-
-      <div class="register">Don’t have an account? <strong><a href="#" style="color: black;">Register here</a></strong></div>
     </div>
   </div>
 </body>
