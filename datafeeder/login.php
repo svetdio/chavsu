@@ -19,6 +19,19 @@
 </head>
 
 <body>
+<style>
+body  {
+  background-image: url("background.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  max-width: 100%;
+}
+</style>    
+
+    <img class="chavsu-head" src="chavsu-head.png" />
+
     <div class="login-container">
         <h2>CHAVSU - ADMIN</h2>
         <form id="loginForm">

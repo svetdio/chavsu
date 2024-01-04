@@ -48,3 +48,11 @@ button:hover {
 #errorMessage {
     color: #dc3545;
 }
+
+.chavsu-head {
+    max-width: 100%;
+    height: auto;
+    position: absolute;
+    left: 1%;
+    top: 1%;
+}
