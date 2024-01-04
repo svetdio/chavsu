@@ -4,9 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Log in | CHAVSU</title>
+  <title>Register | CHAVSU</title>
   <!-- Link to external CSS file -->
-  <link rel="stylesheet" type="text/css" href="css/login.css">
+  <link rel="stylesheet" type="text/css" href="css/register.css">
 
   <!-- Link to external JavaScript file -->
 
@@ -30,15 +30,16 @@ body  {
 
     <!-- log in form -->
     <div class="login-container">
-      <h2> <img class="log" src="images/log.png" /> Log-in with your CvSU account</h2>
+      <h2> <img class="log" src="images/reg.png" /> Create your account</h2>
       <form id="loginForm">
         <label for="email" class="cvsu-email">CvSU Email</label>
-        <input type="email" id="email" class="email" placeholder="Enter your email">
+        <input type="email" id="email" class="email" placeholder="Enter your CvSU email">
 
-        <label for="pass" class="password">Password</label>
+        <label for="pass" class="password">Create your password</label>
         <input type="password" id="pass" class="pass" placeholder="Enter your password">
 
-        <div class="forgot-pass"><a href="#" style="color: black;">Forgot password?</a></div>
+        <label for="pass" class="password">Confirm your password</label>
+        <input type="password" id="pass" class="pass" placeholder="Enter your password">
 
         <button id="login" type="button"><strong>LOG IN</strong></button>
       </form>
