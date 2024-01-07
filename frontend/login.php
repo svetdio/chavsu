@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Log in ChavSU</title>
+  <title>Log in | ChavSU</title>
   <!-- Link to external CSS file -->
   <link rel="stylesheet" type="text/css" href="css/login.css">
 
@@ -38,8 +38,9 @@ body  {
         <label for="pass" class="password">Password</label>
         <input type="password" id="pass" class="pass" placeholder="Enter your password">
 
-        <div class="forgot-pass"><a href="#" style="color: black;">Forgot password?</a></div>
+        <div class="forgot-pass"><a href="reset-pass.php" style="color: black;">Forgot password?</a></div>
 
+        <!-- TODO: temporary -->
         <button id="login" type="button"><strong>LOG IN</strong></button>
 
       </form>
@@ -48,5 +49,11 @@ body  {
       <div class="register">Don’t have an account? <strong><a href="register.php" style="color: black;">Register here</a></strong></div>
     </div>
   </div>
+  <!-- TODO: temporary -->
+  <script>
+        document.getElementById("login").addEventListener("click", function () {
+            window.location.href = "chatai.php";
+        });
+  </script>
 </body>
 </html>

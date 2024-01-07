@@ -4,9 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Register | ChavSU</title>
+  <title>Reset Password | ChavSU</title>
   <!-- Link to external CSS file -->
-  <link rel="stylesheet" type="text/css" href="css/register.css">
+  <link rel="stylesheet" type="text/css" href="css/password.css">
 
   <!-- Link to external JavaScript file -->
 
@@ -29,19 +29,20 @@ body  {
 
     <!-- log in form -->
     <div class="login-container">
-      <h2> <img class="log" src="images/reg.png" /> Create your account</h2>
+      <h2> <img class="log" src="images/lock.png" /> Reset your password</h2>
       <form id="loginForm">
         <label for="email" class="cvsu-email">CvSU Email</label>
-        <input type="email" id="email" class="email" placeholder="Enter your CvSU email">
+        <input type="email" id="email" class="email" placeholder="Enter your email">
 
-        <label for="pass" class="password">Create your password</label>
-        <input type="password" id="pass" class="pass" placeholder="Enter your password">
+        <label for="email" class="cvsu-email">Create your new password</label>
+        <input type="email" id="email" class="email" placeholder="Enter your new password">
 
         <label for="pass" class="password">Confirm your password</label>
-        <input type="password" id="pass" class="pass" placeholder="Re-enter your password">
+        <input type="password" id="pass" class="pass" placeholder="Confirm your password">
+
 
         <div class="button-container">
-            <button id="signin" type="button"><strong>SIGN IN</strong></button>
+            <button id="signin" type="button"><strong>SAVE</strong></button>
             <button id="back" type="button"><strong>BACK</strong></button>
         </div>
 
