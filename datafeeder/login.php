@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Main Panel | CHAVSU Data Feeder</title>
+  <title>Main Panel ChavSU Data Feeder</title>
   <!-- Link to external CSS file -->
   <link rel="stylesheet" type="text/css" href="css/fontawesome.min.css">
   <link rel="stylesheet" type="text/css" href="css/datatables.css">
