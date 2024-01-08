@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Chat | ChavSU</title>
   <!-- Link to external CSS file -->
-  <link rel="stylesheet" type="text/css" href="css/login.css">
+  <link rel="stylesheet" type="text/css" href="css/chatai.css">
 
   <!-- Link to external JavaScript file -->
 
@@ -30,10 +30,14 @@ body  {
     <a href="login.php"><img class="help"src="images/log-out.png"/></a>
 
     <!-- chat form -->
-    <div class="login-container">
+
+    <div class="tab"></div>
+    <img class="msg" src="images/msg.png" />
+
+    <!-- <div class="login-container">
       <form id="loginForm">
         <input type="email" id="email" class="email" placeholder="Enter your email">
       </form>
-  </div>
+  </div> -->
 </body>
 </html>
