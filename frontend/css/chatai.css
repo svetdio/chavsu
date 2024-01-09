@@ -14,11 +14,11 @@ body {
 }
 
 .chavsu-head {
-    max-width: 100%; /* Adjust the maximum width as needed */
+    max-width: 100%;
     height: auto;
     position: absolute;
-    left: 250px; /* Adjust the left position percentage as needed */
-    top: 1%; /* Adjust the top position percentage as needed */
+    left: 250px;
+    top: 1%;
 }
 
 .logout {
@@ -37,30 +37,11 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-h2 {
-    color: #000000;
-    font-family: "CenturyGothic-BoldItalic", sans-serif;
-    font-style: italic;
-    margin-bottom: 50px;
-}
-
-.cvsu-email,
-.password {
-    color: #000000;
-    text-align: left;
-    font-family: "CenturyGothic-Italic", sans-serif;
-    font-size: 16px;
-    font-weight: 400;
-    font-style: italic;
-    width: 133px;
-    height: 28px;
-}
-
 textarea {
     padding: 15px;
     max-width: 100%;
-    width: 650px;
-    height: 50px;
+    width: 53%;
+    height: 8%;
     border: 1px solid #ccc;
     border-radius: 4px;
     color: #000000;
@@ -75,16 +56,14 @@ textarea {
     bottom: 5%;
 }
 
-.send-button {
+.send-btn {
     position: absolute;
-    bottom: 5%; /* Center vertically */
-    right: 10px;
-    transform: translateY(-50%);
+    bottom: 7%;
+    right: 25%;
     background: none;
     border: none;
     cursor: pointer;
-    padding: 5px;
-    fill: #000000;
+    fill: #00241b;
 }
 
 .tab {
@@ -127,12 +106,16 @@ textarea {
     background-color: rgba(255, 255, 255, 0.2);
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 600px) {
     .tab {
-      width: 100%;
-      height: 100%;
+        right: 0;
+        left: 0;
+        width: 100%;
+        border-radius: 0;
+        display: none;
     }
-    .chavsu-head {
-        left: 13%; /* Adjust the left position percentage as needed */
-  }
+
+    .send-btn {
+        right: 0;
+    }
 }

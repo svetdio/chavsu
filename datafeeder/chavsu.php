@@ -20,79 +20,78 @@
 </head>
 
 <body>
+  
+<section class="section">
+  <div class="container is-fluid">
+    <div class="columns">
+      <div class="column is-one-third">
+        <!-- Left Content -->
+        <div class="content">
+          <h1>CHAVSU - IMUS CAMPUS</h1>
 
-  <section class="section">
-    <div class="container is-fluid">
-      <div class="columns">
-        <div class="column is-one-third">
-          <!-- Left Content -->
-          <div class="content">
-            <h1>CHAVSU - IMUS CAMPUS</h1>
+          <label class="label" id="keyw" for="keywords">Keywords:</label>
+          <textarea class="textarea" id="keywords" name="keywords" placeholder="Enter keywords..."></textarea>
 
-            <label class="label" id="keyw" for="keywords">Keywords:</label>
-            <textarea class="textarea" id="keywords" name="keywords" placeholder="Enter keywords..."></textarea>
+          <label class="label" id="resp" for="response">Response:</label>
+          <textarea class="textarea" id="response" name="response" placeholder="Enter response..."></textarea>
 
-
-            <label class="label" id="resp" for="response">Response:</label>
-            <textarea class="textarea" id="response" name="response" placeholder="Enter response..."></textarea>
-
-            <div class="content has-text-centered">
-              <button class='button is-success' id="saveButton">SAVE</button>
-            </div>
-          </div>
-        </div>
-        <div class="column">
-          <!-- Right Content -->
-          <div class="content">
-            <table id="keyword-tbl">
-              <caption>Entered Data</caption>
-              <thead>
-                <tr>
-                  <th>Actions</th>
-                  <th>Keyword</th>
-                  <th>Response</th>
-                </tr>
-              </thead>
-              <tbody id="keywordTableBody">
-                <!-- Keywords will be dynamically added here -->
-              </tbody>
-            </table>
+          <div class="content has-text-centered">
+            <button class='button is-success' id="saveButton">SAVE</button>
           </div>
         </div>
       </div>
-    </div>
-  </section>
 
-  <div id='upd_kwords_form' class="modal">
-    <div class="modal-background"></div>
-    <div class="modal-card">
-      <header class="modal-card-head">
-        <p class="modal-card-title">Edit Entry</p>
-        <button class="delete" aria-label="close"></button>
-      </header>
-      <section class="modal-card-body">
-        <div class="field">
-          <label class="label" id="keyw" for="keywords">Keywords:</label>
-          <textarea class="textarea" id="keywords" name="keywords" placeholder="Enter keywords..."></textarea>
+      <div class="column">
+        <!-- Right Content -->
+        <div class="content">
+          <table id="keyword-tbl">
+            <caption>Entered Data</caption>
+            <thead>
+              <tr>
+                <th>Actions</th>
+                <th>Keyword</th>
+                <th>Response</th>
+              </tr>
+            </thead>
+            <tbody id="keywordTableBody">
+              <!-- Keywords will be dynamically added here -->
+            </tbody>
+          </table>
         </div>
-        <div class="field">
-          <label class="label" id="resp" for="response">Response:</label>
-          <textarea class="textarea" id="response" name="response" placeholder="Enter response..."></textarea>
-        </div>
-      </section>
-      <footer class="modal-card-foot">
-        <button class="button is-success" id='upd_keyword'>Save</button>
-        <button class="button cancel">Cancel</button>
-      </footer>
+      </div>
     </div>
   </div>
+</section>
 
-  <div id="logout" class="logout-btn">
-    <a class="button" href="#" style="color: #ff0000">
-      <i class="fa fa-sign-out" aria-hidden="true" style="color: #ff0000; font-size: 20px;"></i>
-    </a>
+<div id='upd_kwords_form' class="modal">
+  <div class="modal-background"></div>
+  <div class="modal-card">
+    <header class="modal-card-head">
+      <p class="modal-card-title">Edit Entry</p>
+      <button class="delete" aria-label="close"></button>
+    </header>
+    <section class="modal-card-body">
+      <div class="field">
+        <label class="label" id="keyw" for="keywords">Keywords:</label>
+        <textarea class="textarea" id="keywords" name="keywords" placeholder="Enter keywords..."></textarea>
+      </div>
+      <div class="field">
+        <label class="label" id="resp" for="response">Response:</label>
+        <textarea class="textarea" id="response" name="response" placeholder="Enter response..."></textarea>
+      </div>
+    </section>
+    <footer class="modal-card-foot">
+      <button class="button is-success" id='upd_keyword'>Save</button>
+      <button class="button cancel">Cancel</button>
+    </footer>
   </div>
+</div>
+
+<div id="logout" class="logout-btn">
+  <a class="button" href="#" style="color: #ff0000">
+    <i class="fa fa-sign-out" aria-hidden="true" style="color: #ff0000; font-size: 20px;"></i>
+  </a>
+</div>
 
 </body>
-
 </html>
