@@ -29,15 +29,17 @@
     <div id="chat-container">
       <div id="header">
         <img src="images/chavsu-head.png" alt="Logo">
-          <a href="#" id="logout" title="Log out" aria-label="Log out">
-              <i class="fa fa-sign-out"></i>
+          <a href="#" id="logout" title="Log out" aria-hidden="true" >
+              <i class="fa fa-sign-out" style="font-size: 18px;"></i>
           </a>
           <!-- <button id="logout-button" aria-label="Log out" onclick="logout()"></button> -->
       </div>
         <div id="chat-messages"></div>
         <div id="user-input">
             <input type="text" id="message-input" placeholder="Type your message...">
-            <button id="send-button" onclick="sendMessage()">Send</button>
+            <button id="send-button" title="Send your message" aria-hidden="true" onclick="sendMessage()">
+            <i class="fa fa-paper-plane" aria-hidden="true" style="font-size: 18px;"></i>
+            </button>
         </div>
     </div>
 

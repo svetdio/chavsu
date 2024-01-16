@@ -77,7 +77,7 @@ body {
     background-color: #c0392b;
     color: #fff;
     border: none;
-    padding: 8px 16px;
+    padding: 8px 12px;
     border-radius: 4px;
     cursor: pointer;
 }
@@ -104,16 +104,29 @@ body {
     border: 1px solid #ccc;
     border-radius: 4px;
     margin-right: 10px;
+    font-family: "CenturyGothic-BoldItalic", sans-serif;
+
+}
+
+#message-input::placeholder {
+    font-family: "CenturyGothic-Italic", sans-serif;
+    font-style: italic;
 }
 
 #send-button {
-    background-color: #4caf50;
-    color: #fff;
+    background-color: transparent;
+    color: #064635;
     border: none;
-    padding: 8px 16px;
+    padding: 0px 14px;
     border-radius: 4px;
     cursor: pointer;
 }
+
+/* TODO: */
+/* button:disabled {
+    cursor: not-allowed;
+    transform: none;
+} */
 
 #toggle-sidebar-button {
     background-color: #444;
