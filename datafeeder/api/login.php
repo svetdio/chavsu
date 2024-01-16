@@ -15,6 +15,8 @@ $query = "
     FROM admin 
     WHERE
     username = '$username'
+    and
+    isAdmin = 1
 ";
 
 $stmt = $db->query($query);

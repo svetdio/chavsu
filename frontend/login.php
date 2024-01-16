@@ -9,6 +9,8 @@
   <link rel="stylesheet" type="text/css" href="css/login.css">
 
   <!-- Link to external JavaScript file -->
+  <script src="js/jquery-3.7.1.min.js"></script>
+  <script src="js/login.js"></script>
 
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
@@ -54,11 +56,5 @@
     <div class="register">Don’t have an account? <strong><a href="register.php" style="color: black;">Register here</a></strong></div>
   </div>
 
-  <!-- TODO: temporary -->
-  <script>
-    document.getElementById("login").addEventListener("click", function () {
-        window.location.href = "chatai.php";
-    });
-  </script>
 </body>
 </html>

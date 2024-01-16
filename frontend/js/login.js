@@ -1,13 +1,13 @@
 $(function () {
     if (typeof localStorage['chavsu_user'] !== 'undefined') {
         alert("You are already logged-in");
-        window.location = 'chavsu.php';
+        window.location = 'chatai.php';
     }
 
     $('#login').on("click", function (e) {
         e.preventDefault();
-        let username = $('#username').val();
-        let password = $('#password').val();
+        let username = $('#email').val();
+        let password = $('#pass').val();
 
         if (username == "" || password == "") {
             alert("Please input username or password!");
@@ -17,7 +17,7 @@ $(function () {
                 if (typeof data.error === "undefined") {
                     localStorage['chavsu_user'] = res;
                     alert("Log in Successful!");
-                        window.location = 'chavsu.php';
+                        window.location = 'chatai.php';
                 } else {
                     alert(data.error);
                 }
