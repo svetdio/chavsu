@@ -9,8 +9,22 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    height: 97.8vh;
     flex-direction: column;
+}
+
+#header {
+    max-width: 100%;
+    width: 207.8vh;
+    position: absolute;
+    background-color: #064635;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    top: -1%;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
 }
 
 .chavsu-head {
@@ -27,19 +41,6 @@ body {
     position: absolute;
     right: 10%;
     top: 28%;
-}
-
-#header {
-    width: 100%;
-    position: absolute;
-    background-color: #064635;
-    color: #fff;
-    padding: 10px;
-    text-align: center;
-    top: -1%;
-    z-index: 1000;
-    display: flex;
-    justify-content: space-between;
 }
 
 .help-black {

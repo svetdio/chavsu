@@ -9,20 +9,13 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    height: 97.8vh;
     flex-direction: column;
 }
 
-.chavsu-head {
-    max-width: 100%; /* Adjust the maximum width as needed */
-    height: auto;
-    position: absolute;
-    left: 1%; /* Adjust the left position percentage as needed */
-    top: 1%; /* Adjust the top position percentage as needed */
-}
-
 #header {
-    width: 100%;
+    max-width: 100%;
+    width: 207.8vh;
     position: absolute;
     background-color: #064635;
     color: #fff;
@@ -32,7 +25,14 @@ body {
     z-index: 1000;
     display: flex;
     justify-content: space-between;
+}
 
+.chavsu-head {
+    max-width: 100%; /* Adjust the maximum width as needed */
+    height: auto;
+    position: absolute;
+    left: 1%; /* Adjust the left position percentage as needed */
+    top: 1%; /* Adjust the top position percentage as needed */
 }
 
 .help {
