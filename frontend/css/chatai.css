@@ -122,6 +122,10 @@ body {
     cursor: pointer;
 }
 
+#send-button:active {
+    transform: scale(0.8); /* Add a slight scale effect when button is clicked */
+}
+
 /* TODO: */
 /* button:disabled {
     cursor: not-allowed;
