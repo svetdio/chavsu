@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Log in | ChavSU</title>
   <!-- Link to external CSS file -->
+  <link href="css/fontawesome.min.css" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="css/login.css">
 
   <!-- Link to external JavaScript file -->
@@ -15,17 +16,7 @@
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 
-<body>
-  <style>
-  body  {
-    background-image: url("images/background.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-    max-width: 100%;
-    }
-  </style>    
+<body>   
   
   <!-- header -->
   <div id="header">

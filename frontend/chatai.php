@@ -15,7 +15,6 @@
 </head>
 
 <body>
-
     <div id="sidebar">
         <!-- <button id="toggle-sidebar-button" onclick="toggleSidebar()">Toggle Sidebar</button> -->
         <div id="logo-container">

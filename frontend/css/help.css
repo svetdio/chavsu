@@ -1,5 +1,5 @@
 body {
-    background-image: url("images/background.png");
+    background-image: url("../images/background.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -40,7 +40,13 @@ body {
     z-index: 1000;
     display: flex;
     justify-content: space-between;
+}
 
+.help-black {
+    width: 35px;
+    height: 30px;
+    position: relative;
+    top: 8px;
 }
 
 #guide {

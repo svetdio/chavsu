@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Register | ChavSU</title>
   <!-- Link to external CSS file -->
+  <link href="css/fontawesome.min.css" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="css/register.css">
 
   <!-- Link to external JavaScript file -->
@@ -13,19 +14,11 @@
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 
-<body>
-<style>
-body  {
-  background-image: url("images/background.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-  max-width: 100%;
-}
-</style>    
+<body> 
 
-    <img class="chavsu-head" src="images/chavsu-head.png" />
+<div id="header">
+  <img src="images/chavsu-head.png" alt="Logo">
+</div>
 
     <!-- log in form -->
     <div class="login-container">
