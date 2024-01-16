@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Reset Password | ChavSU</title>
   <!-- Link to external CSS file -->
+  <link href="css/fontawesome.min.css" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="css/password.css">
 
   <!-- Link to external JavaScript file -->
@@ -14,16 +15,6 @@
 </head>
 
 <body>
-<style>
-body  {
-  background-image: url("images/background.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-  max-width: 100%;
-}
-</style>    
 
 <div id="header">
   <img src="images/chavsu-head.png" alt="Logo">
