@@ -1,121 +1,140 @@
 body {
-    background-image: url("images/background.png");
+    background-image: url("../images/background.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    position: relative;
-    background-color: #eceaea;
-    font-family: "CenturyGothic-BoldItalic", sans-serif;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
     display: flex;
-    align-items: center;
-    justify-content: center;
     height: 100vh;
-    flex-direction: column;
+    overflow: hidden;
 }
 
-.chavsu-head {
-    max-width: 100%;
-    height: auto;
-    position: absolute;
-    left: 250px;
-    top: 1%;
-}
-
-.logout {
-    width: 29px;
-    height: 30px;
-    position: absolute;
-    right: 1%;
-    top: 1%;
-}
-
-.login-container {
-    max-width: 100%;
-    background-color: rgba(255, 255, 255, 0.2);
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-textarea {
-    padding: 15px;
-    max-width: 100%;
-    width: 53%;
-    height: 8%;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    color: #000000;
-    text-align: left;
-    font-family: "CenturyGothic-Italic", sans-serif;
-    font-size: 16px;
-    font-weight: 400;
-    font-style: italic;
-    resize: none;
+#sidebar {
+    width: 300px;
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
     box-sizing: border-box;
-    position: absolute;
-    bottom: 5%;
+    overflow-y: auto;
+    transition: width 0.3s;
 }
 
-.send-btn {
-    position: absolute;
-    bottom: 7%;
-    right: 25%;
-    background: none;
-    border: none;
-    cursor: pointer;
-    fill: #00241b;
+#logo-container {
+    text-align: center;
+    margin-bottom: 20px;
 }
 
-.tab {
-    max-width: 100%;
-    background: #00241b;
-    width: 250px;
-    height: 1100px;
-    position: absolute;
-    left: -1%;
-    bottom: -1%;
+#logo-container img {
+    width: 80%;
+    height: auto;
 }
 
-.msg {
-    width: 21px;
-    height: 21px;
-    position: absolute;
-    object-fit: cover;
-    left: 30px;
-    top: 8px;
-}
-
-#new-chat-btn {
+#new_chat {
     max-width: 100%;
     border: none;
     border-radius: 8px;
+    padding: 8px 50px;
     cursor: pointer;
-    left: 0px;
-    top: 10px;
-    padding: 8px 70px;
-    position: absolute;
     background-color: transparent;
     color: white;
     text-align: center;
     font-family: "Century Gothic", sans-serif;
-    font-size: 16px;
+    font-size: 20px;
     font-weight: 400;
 }
 
-#new-chat-btn:hover {
+#new_chat:hover {
     background-color: rgba(255, 255, 255, 0.2);
 }
 
-@media only screen and (max-width: 600px) {
-    .tab {
-        right: 0;
-        left: 0;
-        width: 100%;
-        border-radius: 0;
-        display: none;
+#chat-container {
+    flex-grow: 1;
+    background-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+#header {
+    background-color: rgb(5, 102, 18);
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#logout {
+    background-color: #c0392b;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#logout-button i {
+    margin-right: 5px;
+}
+
+#chat-messages {
+    flex-grow: 1;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+#user-input {
+    padding: 10px;
+    background-color: #eee;
+    display: flex;
+}
+
+#message-input {
+    flex-grow: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+#send-button {
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#toggle-sidebar-button {
+    background-color: #444;
+    color: #fff;
+    border: none;
+    padding: 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    position: absolute;
+    left: 20px;
+    top: 10px;
+    z-index: 2000;
+}
+
+/* Responsive styles */
+@media only screen and (max-width: 768px) {
+    #sidebar {
+        width: 0;
     }
 
-    .send-btn {
-        right: 0;
+    #chat-container {
+        border-radius: 0;
     }
 }
