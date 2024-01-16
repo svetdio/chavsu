@@ -8,6 +8,10 @@
     <link href="css/fontawesome.min.css" rel="stylesheet">
     <link href="css/chatai.css" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+    <!-- Link to external JavaScript file -->
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/chatai.js"></script>
 </head>
 
 <body>
@@ -24,13 +28,13 @@
     </div>
 
     <div id="chat-container">
-        <div id="header">
-            <img src="images/chavsu-head.png" alt="Logo">
-            <a href="#" id="logout" title="Log out" aria-label="Log out">
-                <i class="fa fa-sign-out"></i>
-            </a>
-            <!-- <button id="logout-button" aria-label="Log out" onclick="logout()"></button> -->
-        </div>
+      <div id="header">
+        <img src="images/chavsu-head.png" alt="Logo">
+          <a href="#" id="logout" title="Log out" aria-label="Log out">
+              <i class="fa fa-sign-out"></i>
+          </a>
+          <!-- <button id="logout-button" aria-label="Log out" onclick="logout()"></button> -->
+      </div>
         <div id="chat-messages"></div>
         <div id="user-input">
             <input type="text" id="message-input" placeholder="Type your message...">

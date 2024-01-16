@@ -29,6 +29,20 @@ body {
     top: 28%;
 }
 
+#header {
+    width: 100%;
+    position: absolute;
+    background-color: #064635;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    top: -1%;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+
+}
+
 #guide {
     color: #000000;
     text-align: left;

@@ -21,12 +21,23 @@ body {
     top: 1%; /* Adjust the top position percentage as needed */
 }
 
+#header {
+    width: 100%;
+    position: absolute;
+    background-color: #064635;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    top: -1%;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+
+}
+
 .help {
     width: 29px;
     height: 30px;
-    position: absolute;
-    right: 1%;
-    top: 1%;
 }
 
 .login-container {

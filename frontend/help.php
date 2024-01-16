@@ -21,10 +21,12 @@ body  {
   position: relative;
   max-width: 100%;
 }
-</style>    
+</style>
+<div id="header">
+  <img src="images/chavsu-head.png" alt="Logo">
+</div>
 
-    <img class="chavsu-head" src="images/chavsu-head.png" />
-    <img class="chavsu" src="images/chavsu.png" />
+<img class="chavsu" src="images/chavsu.png" />
 
 
     <p id="guide"><img class="help-black" src="images/help-black.png" /><strong><i>Help</i></strong><br/><br/><strong>Who can use ChavSU?</strong><br /><br /> <i>You also need a CvSU Email account that you manage on your own for which your admin enabled access to ChavSU. You can’t access ChavSU with a Personal Gmail Account or Google Account managed by Family Link or with a Google Workspace for Education account designated as under the age of 18.<br /><br /> Generative AI and all of its possibilities are exciting, but it’s still new. ChavSU is an experiment, and it will make mistakes. Even though it’s getting better every day, ChavSU can provide inaccurate information, or it can even make offensive statements.</i></div>
