@@ -84,6 +84,10 @@ body {
     background-color: rgb(212, 21, 21);
 }
 
+#back:active {
+    transform: scale(0.95);
+}
+
 /* Media query for mobile screens in portrait mode */
 @media only screen and (max-width: 599.98px) {
     #guide,.body {

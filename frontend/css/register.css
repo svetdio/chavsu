@@ -144,6 +144,14 @@ button {
     background-color:rgb(212, 21, 21);
 }
 
+#signin:active {
+    transform: scale(0.95);
+}
+
+#back:active {
+    transform: scale(0.95);
+}
+
 #errorMessage {
     color: #dc3545;
 }

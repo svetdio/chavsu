@@ -86,6 +86,10 @@ body {
     margin-right: 5px;
 }
 
+#logout:active {
+    transform: scale(0.9);
+}
+
 #chat-messages {
     flex-grow: 1;
     padding: 20px;
@@ -123,7 +127,7 @@ body {
 }
 
 #send-button:active {
-    transform: scale(0.8); /* Add a slight scale effect when button is clicked */
+    transform: scale(0.8);
 }
 
 /* TODO: */

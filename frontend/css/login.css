@@ -40,6 +40,10 @@ body {
     height: 30px;
 }
 
+.help:active {
+    transform: scale(0.9);
+}
+
 .login-container {
     max-width: 100%;
     background-color: rgba(255, 255, 255, 0.2);
@@ -132,6 +136,10 @@ input {
 
 #login:hover {
     background-color:orangered;
+}
+
+#login:active {
+    transform: scale(0.95);
 }
 
 #errorMessage {
