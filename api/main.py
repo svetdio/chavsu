@@ -7,7 +7,7 @@ from llama_index.text_splitter import SentenceSplitter
 
 # app = FastAPI()
 
-os.environ['OPENAI_API_KEY'] = "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"
+os.environ['OPENAI_API_KEY'] = "API_KEY"
 
 # @app.get("/")
 # async def read_root():
