@@ -161,3 +161,31 @@ body {
         border-radius: 0;
     }
 }
+
+#chat-messages {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.user-message {
+    background-color: #1bcc47;
+    color: #000;
+    border-radius: 20px 20px 0 20px;
+    padding: 10px;
+    margin: 5px 0;
+    max-width: 70%;
+    align-self: flex-end;
+    text-wrap: wrap;
+}
+
+.bot-message {
+    background-color: #cccccc;
+    color: #000;
+    border-radius: 20px 20px 20px 0;
+    padding: 10px;
+    margin: 5px 0;
+    max-width: 70%;
+    align-self: flex-start;
+    text-wrap: wrap;
+}

@@ -48,23 +48,38 @@
             var userInput = document.getElementById("message-input").value;
 
             // Display user message
-            displayMessage("User", userInput, true);
+            displayMessage("You", userInput, true);
 
             // Simulate bot response (you would replace this with actual API calls or backend logic)
             var botResponse = "Thank you for your message! This is just a sample response.";
-            displayMessage("Bot", botResponse, false);
+            var botProfilePicture = "images/robot.png";
+            displayMessage("ChavSU", botResponse, false, false, botProfilePicture);
 
             // Clear the input field
             document.getElementById("message-input").value = "";
         }
 
-        function displayMessage(sender, message, isUser) {
+        function displayMessage(sender, message, isUser, isImage = false, profilePicture = null) {
             var chatMessages = document.getElementById("chat-messages");
 
             // Create a new message element
             var messageElement = document.createElement("div");
             messageElement.className = isUser ? "user-message" : "bot-message";
-            messageElement.innerHTML = "<strong>" + sender + ":</strong> " + message;
+
+            if (profilePicture) {
+                // If a profile picture is provided, create an image element for the profile picture
+                var profilePictureElement = document.createElement("img");
+                profilePictureElement.src = profilePicture;
+                profilePictureElement.alt = "ChavSU Profile";
+                profilePictureElement.className = "profile-picture";
+                messageElement.appendChild(profilePictureElement);
+            }
+
+
+            // Create a paragraph element for the message
+            var textElement = document.createElement("p");
+            textElement.innerHTML = "<strong>" + sender + ":</strong> " + message;
+            messageElement.appendChild(textElement);
 
             // Append the message to the chat container
             chatMessages.appendChild(messageElement);
