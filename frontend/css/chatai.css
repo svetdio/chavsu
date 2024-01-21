@@ -280,12 +280,15 @@ body {
 }
 
 .typing-indicator  {
+    padding: 10px;
+    display: flex;
+    height: 5vh;
     span {
         width: 15px;
         height: 15px;
         background-color: #004909;
         display: inline-block;
-        margin: 1px;
+        margin: 3px;
         border-radius: 50%;
         top: 100%;
         &:nth-child(1) {
