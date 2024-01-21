@@ -44,32 +44,6 @@
         </div>
         <div id="chat-messages">
             <div class="message-container bot-message">
-                <img src="images/robot.png" alt="Bot Image" class="message-image">
-                <div class="message-bubble">
-                    Hi there! I'm a friendly bot.
-                </div>
-            </div>
-            <div class="message-container bot-message">
-                <img src="images/robot.png" alt="Bot Image" class="message-image">
-                <div class="message-bubble">
-                    Hi there! I'm a friendly bot. Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque harum, excepturi impedit omnis temporibus perferendis rerum repudiandae. Voluptatibus id, blanditiis soluta molestias nulla, animi maiores eius debitis atque, accusamus laborum.
-                </div>
-            </div>
-            <div class="message-container bot-message">
-                <img src="images/robot.png" alt="Bot Image" class="message-image">
-                <div class="message-bubble">
-                    Hi there! I'm a friendly bot. Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque harum, excepturi impedit omnis temporibus perferendis rerum repudiandae. Voluptatibus id, blanditiis soluta molestias nulla, animi maiores eius debitis atque, accusamus laborum.
-                    Hi there! I'm a friendly bot. Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque harum, excepturi impedit omnis temporibus perferendis rerum repudiandae. Voluptatibus id, blanditiis soluta molestias nulla, animi maiores eius debitis atque, accusamus laborum.
-                </div>
-            </div>
-            <div class="message-container bot-message">
-                <img src="images/robot.png" alt="Bot Image" class="message-image">
-                <div class="message-bubble">
-                    Hi there! I'm a friendly bot. Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque harum, excepturi impedit omnis temporibus perferendis rerum repudiandae. Voluptatibus id, blanditiis soluta molestias nulla, animi maiores eius debitis atque, accusamus laborum.
-                    Hi there! I'm a friendly bot. Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque harum, excepturi impedit omnis temporibus perferendis rerum repudiandae. Voluptatibus id, blanditiis soluta molestias nulla, animi maiores eius debitis atque, accusamus laborum.
-                    Hi there! I'm a friendly bot. Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque harum, excepturi impedit omnis temporibus perferendis rerum repudiandae. Voluptatibus id, blanditiis soluta molestias nulla, animi maiores eius debitis atque, accusamus laborum.
-                    Hi there! I'm a friendly bot. Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque harum, excepturi impedit omnis temporibus perferendis rerum repudiandae. Voluptatibus id, blanditiis soluta molestias nulla, animi maiores eius debitis atque, accusamus laborum.
-                </div>
             </div>
         </div>
 
@@ -88,17 +62,6 @@
         </div>
 
     </div>
-
-    <script>
-        // Your existing JavaScript code here
-
-        // Example usage to show typing indicator
-        toggleTypingIndicator(true);
-
-        // Example usage to hide typing indicator
-        toggleTypingIndicator(false);
-    </script>
-
 </body>
 
 </html>

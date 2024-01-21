@@ -49,6 +49,9 @@ function toggleTypingIndicator(show) {
     }
 }
 
+toggleTypingIndicator(true);
+toggleTypingIndicator(false);
+
 function displayMessage(sender, message, isUser, profilePicture = null) {
     var chatMessages = document.getElementById("chat-messages");
 
