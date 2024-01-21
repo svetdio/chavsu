@@ -3,8 +3,8 @@ $(function () {
         alert("Please log in");
         window.location = 'login.php';
     }
-
-    $('#logout').unbind('click').click(function () {
+ 
+    $('.sidebar-item').unbind('click').click(function () {
         let conv_id = $(this).data('conv_id')
         get_conversation(conv_id);
     });
