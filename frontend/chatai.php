@@ -42,6 +42,7 @@
             </a>
             <!-- <button id="logout-button" aria-label="Log out" onclick="logout()"></button> -->
         </div>
+
         <div id="chat-messages">
             <div class="message-container bot-message">
                 <img src="images/robot.png" alt="Bot Image" class="message-image">
@@ -51,7 +52,6 @@
             </div>
         </div>
 
-        <!-- Typing Indicator -->
         <div class="typing-indicator hide">
             <span></span>
             <span></span>
