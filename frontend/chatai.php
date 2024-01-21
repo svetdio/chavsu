@@ -26,10 +26,13 @@
         </div>
 
         <div id="sidebar-content">
-            <div class="sidebar-item" data-conv_id='2'>
+            <!-- <div class="sidebar-item">
+                Start your first conversation by clicking New Chat
+            </div> -->
+            <!-- <div class="sidebar-item" data-conv_id='2'>
                 <a href="#">Chat # 1</a>
                 <button class="del-button" data-conv_id='2'>Delete</button>
-            </div>
+            </div> -->
             <!-- Add more sidebar items as needed -->
         </div>
     </div>
@@ -57,7 +60,7 @@
             <span></span>
             <span></span>
         </div>
-        
+
         <div id="user-input">
             <input type="text" id="message-input" placeholder="Type your message...">
             <button id="send-button" title="Send your message" aria-hidden="true">

@@ -3,7 +3,20 @@ $(function () {
         alert("Please log in");
         window.location = 'login.php';
     }
- 
+
+    const userID = JSON.parse(localStorage['chavsu_user']).id
+
+    $.get('api/get_conv_list.php', { userID }, function (r) {
+        let d = JSON.parse(r);
+
+        if (d.success) {
+            d.list.forEach(function (v) {
+                createConvList(v)
+            })
+        } else {
+            createConvList()
+        }
+    })
     $('.sidebar-item').unbind('click').click(function () {
         let conv_id = $(this).data('conv_id')
         get_conversation(conv_id);
@@ -13,7 +26,6 @@ $(function () {
     const get_conversation = function (conv_id) {
         alert(conv_id)
     }
-
 
     $('#logout').unbind('click').click(function () {
         let c = confirm("Are you sure you want to log out?")
@@ -27,6 +39,7 @@ $(function () {
         let q = $('#message-input').val();
         displayMessage("You", q, true);
 
+        $('#message-input').val('');
         // Show typing indicator
         showTypingIndicator();
 
@@ -49,6 +62,31 @@ function showTypingIndicator() {
 // Function to hide typing indicator
 function hideTypingIndicator() {
     $('.typing-indicator').addClass('hide');
+}
+
+function createConvList(conv = false) {
+    var convList = document.getElementById("sidebar-content");
+    var convElement = document.createElement("div");
+    convElement.className = "sidebar-item";
+    
+    if(conv) {
+        convElement.setAttribute("data-conv_id", conv.conv_id);
+        
+        var convName = document.createElement('a')
+        convName.href = '#'
+        convName.innerHTML = "Chat # " + conv.conv_id
+        
+        var conActions = document.createElement('button')
+        conActions.className = "del-button";
+        conActions.setAttribute("data-conv_id", conv.conv_id);
+        conActions.innerHTML = "Delete"
+        convElement.appendChild(convName);
+        convElement.appendChild(conActions);
+    } else {
+        convElement.innerHTML = "Start your first conversation by clicking New Chat"
+    }
+
+    convList.appendChild(convElement);
 }
 
 function displayMessage(sender, message, isUser, profilePicture = null) {
