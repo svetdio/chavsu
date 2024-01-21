@@ -11,6 +11,7 @@
 
     <!-- Link to external JavaScript file -->
     <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/chatai.js"></script>
 
 </head>
 
@@ -35,6 +36,7 @@
             <!-- <button id="logout-button" aria-label="Log out" onclick="logout()"></button> -->
         </div>
         <div id="chat-messages">
+
             <!-- <div class="message-container bot-message">
                 <img src="images/robot.png" alt="Bot Image" class="message-image">
                 <div class="message-bubble">
@@ -42,15 +44,32 @@
                 </div>
             </div> -->
         </div>
+
+        <!-- Typing Indicator -->
+        <div class="typing-indicator hide">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        
         <div id="user-input">
             <input type="text" id="message-input" placeholder="Type your message...">
             <button id="send-button" title="Send your message" aria-hidden="true">
                 <i class="fa fa-paper-plane" aria-hidden="true" style="font-size: 18px;"></i>
             </button>
         </div>
+
     </div>
-    
-    <script src="js/chatai.js"></script>
+
+    <script>
+        // Your existing JavaScript code here
+
+        // Example usage to show typing indicator
+        toggleTypingIndicator(true);
+
+        // Example usage to hide typing indicator
+        toggleTypingIndicator(false);
+    </script>
 
 </body>
 
