@@ -27,30 +27,29 @@ $(function () {
         let q = $('#message-input').val();
         displayMessage("You", q, true);
 
-        // Display typing indicator
-        toggleTypingIndicator(true);
+        // Show typing indicator
+        showTypingIndicator();
 
         $.get('http://localhost:8000/chat/', { q: q }, function (r) {
+            // Hide typing indicator when the response is received
+            hideTypingIndicator();
+
             let botProfilePicture = "images/robot.png";
             displayMessage("ChavSU", r, false, botProfilePicture);
 
-            // Hide typing indicator after receiving the response
-            toggleTypingIndicator(false);
         });
     });
 });
 
-function toggleTypingIndicator(show) {
-    var typingIndicator = document.querySelector('.typing-indicator');
-    if (show) {
-        typingIndicator.classList.remove('hide');
-    } else {
-        typingIndicator.classList.add('hide');
-    }
+// Function to show typing indicator
+function showTypingIndicator() {
+    $('.typing-indicator').removeClass('hide');
 }
 
-toggleTypingIndicator(true);
-toggleTypingIndicator(false);
+// Function to hide typing indicator
+function hideTypingIndicator() {
+    $('.typing-indicator').addClass('hide');
+}
 
 function displayMessage(sender, message, isUser, profilePicture = null) {
     var chatMessages = document.getElementById("chat-messages");
