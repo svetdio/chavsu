@@ -122,19 +122,22 @@ $(function () {
     $('#send-button').unbind('click').click(function () {
         let q = $('#message-input').val();
         let conv_id = $(this).data('conv_id')
-        displayMessage(conv_id, q, true);
 
-        $('#message-input').val('');
-        // Show typing indicator
-        showTypingIndicator();
+        if (typeof conv_id !== 'undefined') {
+            displayMessage(conv_id, q, true);
 
-        $.get('http://localhost:8000/chat/', { q: q }, function (r) {
-            // Hide typing indicator when the response is received
-            hideTypingIndicator();
+            $('#message-input').val('');
+            // Show typing indicator
+            showTypingIndicator();
 
-            let botProfilePicture = "images/robot.png";
-            displayMessage(conv_id, r, false);
-        });
+            $.get('http://localhost:8000/chat/', { q: q }, function (r) {
+                // Hide typing indicator when the response is received
+                hideTypingIndicator();
+
+                let botProfilePicture = "images/robot.png";
+                displayMessage(conv_id, r, false);
+            });
+        }
     });
 
 
