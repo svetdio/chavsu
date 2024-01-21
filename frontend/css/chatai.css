@@ -279,10 +279,21 @@ body {
     }
 }
 
+.type {
+    padding: 0px;
+    display: flex;
+    height: 3vh;
+    bottom: 50px;
+    font-family: "Century Gothic", sans-serif;
+    font-size: 15px;
+    font-style: italic;
+    position: absolute;
+}
+
 .typing-indicator  {
     padding: 10px;
     display: flex;
-    height: 5vh;
+    height: 8vh;
     span {
         width: 15px;
         height: 15px;
