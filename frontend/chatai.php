@@ -47,12 +47,12 @@
         </div>
 
         <div id="chat-messages">
-            <div class="message-container bot-message">
+            <!-- <div class="message-container bot-message">
                 <img src="images/robot.png" alt="Bot Image" class="message-image">
                 <div class="message-bubble">
                     Hi there! I'm <strong><i>ChavSU</i></strong>. How can I assist you?
                 </div>
-            </div>
+            </div> -->
         </div>
 
         
