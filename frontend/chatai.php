@@ -58,11 +58,11 @@
         
         <div class="typing-indicator hide">
             <p class="type">ChavSU is typing</p>
-        </div>
-        <div class="typing-indicator hide">
-            <span></span>
-            <span></span>
-            <span></span>
+            <div class="typing-indicator hide">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
 
         <div id="user-input">

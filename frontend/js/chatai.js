@@ -35,6 +35,14 @@ $(function () {
         }
     });
 
+    $('#send-button').prop('disabled', true);
+
+    // Add an input event listener to check the input value
+    $('#message-input').on('input', function () {
+        // If the input value is empty, disable the send button; otherwise, enable it
+        $('#send-button').prop('disabled', $(this).val().trim() === '');
+    });
+
     $('#send-button').unbind('click').click(function () {
         let q = $('#message-input').val();
         displayMessage("You", q, true);

@@ -133,11 +133,10 @@ body {
     transform: scale(0.8);
 }
 
-/* TODO: */
-/* button:disabled {
+#send-button:disabled {
     cursor: not-allowed;
     transform: none;
-} */
+}
 
 #toggle-sidebar-button {
     background-color: #444;
@@ -151,8 +150,6 @@ body {
     top: 10px;
     z-index: 2000;
 }
-
-
 
 #chat-messages {
     display: flex;
@@ -282,18 +279,17 @@ body {
 .type {
     padding: 0px;
     display: flex;
-    height: 3vh;
-    bottom: 50px;
+    height: auto;
     font-family: "Century Gothic", sans-serif;
     font-size: 15px;
     font-style: italic;
-    position: absolute;
+    
 }
 
 .typing-indicator  {
     padding: 10px;
     display: flex;
-    height: 8vh;
+    height: 5vh;
     span {
         width: 15px;
         height: 15px;
