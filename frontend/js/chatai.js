@@ -3,6 +3,17 @@ $(function () {
         alert("Please log in");
         window.location = 'login.php';
     }
+ 
+    $('.sidebar-item').unbind('click').click(function () {
+        let conv_id = $(this).data('conv_id')
+        get_conversation(conv_id);
+    });
+
+
+    const get_conversation = function (conv_id) {
+        alert(conv_id)
+    }
+
 
     $('#logout').unbind('click').click(function () {
         let c = confirm("Are you sure you want to log out?")

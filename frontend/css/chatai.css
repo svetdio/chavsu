@@ -13,7 +13,8 @@ body {
 }
 
 #sidebar {
-    width: 260px;
+    /* max-width: 100%; */
+    min-width: 15%;
     background-color: #031d16;
     color: #fff;
     padding: 20px;
@@ -189,7 +190,7 @@ body {
 
 .message-bubble {
     background-color: #cccccc;
-    max-width: 70%;
+    max-width: 100%;
     padding: 10px;
     margin: 0 10px;
     word-wrap: break-word;
@@ -197,7 +198,10 @@ body {
 
 
 .message-image {
-    max-width: 100%;
+    width: 2vw;
+    height: 4vh;
+    /* max-width: 1;
+    max-height: 70%; */
     border-radius: 8px;
     margin-top: 10px;
 }
@@ -212,6 +216,45 @@ body {
     background-color: #cccccc;
     border-radius: 20px 20px 20px 0;
     color: #333;
+}
+
+#sidebar-content {
+    margin-top: 20px;
+}
+
+.sidebar-item {
+    position: relative;
+}
+
+.sidebar-item:hover .del-button {
+    opacity: 1;
+}
+
+.sidebar-item a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 0;
+    border-bottom: 1px solid #555;
+    transition: background-color 0.3s;
+}
+
+.sidebar-item a:hover {
+    background-color: #555;
+}
+
+.del-button {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 4px;
+    opacity: 0;
+    transition: opacity 0.3s;
 }
 
 /* Responsive styles */
