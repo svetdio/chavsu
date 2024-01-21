@@ -3,28 +3,104 @@ $(function () {
         alert("Please log in");
         window.location = 'login.php';
     }
-
     const userID = JSON.parse(localStorage['chavsu_user']).id
 
-    $.get('api/get_conv_list.php', { userID }, function (r) {
-        let d = JSON.parse(r);
+    const displayMessage = function (conv_id, message, isUser, saveConvo = true) {
+        var chatMessages = document.getElementById("chat-messages");
 
-        if (d.success) {
-            d.list.forEach(function (v) {
-                createConvList(v)
-            })
-        } else {
-            createConvList()
+        // Create a new message element
+        var messageElement = document.createElement("div");
+        messageElement.className = isUser ? "message-container user-message" : "message-container bot-message";
+
+        if (!isUser) {
+            // If a profile picture is provided, create an image element for the profile picture
+            let botProfilePicture = "images/robot.png";
+            var profilePictureElement = document.createElement("img");
+            profilePictureElement.src = botProfilePicture;
+            profilePictureElement.alt = "ChavSU Profile";
+            profilePictureElement.className = "message-image";
+            messageElement.appendChild(profilePictureElement);
         }
-    })
-    $('.sidebar-item').unbind('click').click(function () {
-        let conv_id = $(this).data('conv_id')
-        get_conversation(conv_id);
+
+        // Create a message bubble
+        var messageBubble = document.createElement("div");
+        messageBubble.className = "message-bubble";
+        messageBubble.innerHTML = message;
+
+        // Append the message bubble to the message container
+        messageElement.appendChild(messageBubble);
+
+        // Append the message to the chat container
+        chatMessages.appendChild(messageElement);
+
+        // Scroll to the bottom of the chat container
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+
+        if (saveConvo) {
+            $.post('api/add_conv_history.php', { conv_id, isUser, message }, function (s) {
+                console.log('Message sent');
+            });
+        }
+    }
+
+    const getConversationList = function () {
+        $('#sidebar-content').html('')
+
+        $.get('api/get_conv_list.php', { userID }, function (r) {
+            let d = JSON.parse(r);
+
+            if (d.success) {
+                d.list.forEach(function (v) {
+                    createConvList(v)
+                })
+            } else {
+                createConvList()
+            }
+
+            $('.sidebar-item').unbind('click').click(function () {
+                let conv_id = $(this).data('conv_id')
+                get_conversation(conv_id);
+            });
+        })
+    }
+
+
+    $('#new_chat').unbind('click').click(function () {
+        $.post('api/add_conversation.php', { userID }, function (r) {
+            let d = JSON.parse(r);
+
+            if (d.success) {
+                let conv_id = d.conv_id
+                getConversationList();
+                get_conversation(conv_id);
+                displayMessage(conv_id, "Hi there! I'm <strong>ChavSU.</strong> How can I assist you?", false);
+            } else {
+                alert(d.error);
+            }
+        });
     });
 
+    getConversationList();
 
     const get_conversation = function (conv_id) {
-        alert(conv_id)
+        $('#chat-messages').html('');
+        $('#send-button').attr('data-conv_id', conv_id);
+
+        $.get('api/get_conv_hist.php', { conv_id, userID }, function (r) {
+            let d = JSON.parse(r);
+
+            if (d.success) {
+
+                d.conversation.forEach(function (v) {
+                    let msg = v.message
+                    let sender = v.sender == 'bot' ? false : true;
+                    displayMessage(conv_id, msg, sender, false);
+                })
+
+            } else {
+                alert(d.error);
+            }
+        })
     }
 
     $('#logout').unbind('click').click(function () {
@@ -45,7 +121,8 @@ $(function () {
 
     $('#send-button').unbind('click').click(function () {
         let q = $('#message-input').val();
-        displayMessage("You", q, true);
+        let conv_id = $(this).data('conv_id')
+        displayMessage(conv_id, q, true);
 
         $('#message-input').val('');
         // Show typing indicator
@@ -56,10 +133,12 @@ $(function () {
             hideTypingIndicator();
 
             let botProfilePicture = "images/robot.png";
-            displayMessage("ChavSU", r, false, botProfilePicture);
-
+            displayMessage(conv_id, r, false);
         });
     });
+
+
+
 });
 
 // Function to show typing indicator
@@ -76,14 +155,14 @@ function createConvList(conv = false) {
     var convList = document.getElementById("sidebar-content");
     var convElement = document.createElement("div");
     convElement.className = "sidebar-item";
-    
-    if(conv) {
+
+    if (conv) {
         convElement.setAttribute("data-conv_id", conv.conv_id);
-        
+
         var convName = document.createElement('a')
         convName.href = '#'
         convName.innerHTML = "Chat # " + conv.conv_id
-        
+
         var conActions = document.createElement('button')
         conActions.className = "del-button";
         conActions.setAttribute("data-conv_id", conv.conv_id);
@@ -97,34 +176,34 @@ function createConvList(conv = false) {
     convList.appendChild(convElement);
 }
 
-function displayMessage(sender, message, isUser, profilePicture = null) {
-    var chatMessages = document.getElementById("chat-messages");
+// function displayMessage(message, isUser) {
+//     var chatMessages = document.getElementById("chat-messages");
 
-    // Create a new message element
-    var messageElement = document.createElement("div");
-    messageElement.className = isUser ? "message-container user-message" : "message-container bot-message";
+//     // Create a new message element
+//     var messageElement = document.createElement("div");
+//     messageElement.className = isUser ? "message-container user-message" : "message-container bot-message";
 
+//     if (isUser) {
+//         // If a profile picture is provided, create an image element for the profile picture
+//         let botProfilePicture = "images/robot.png";
+//         var profilePictureElement = document.createElement("img");
+//         profilePictureElement.src = botProfilePicture;
+//         profilePictureElement.alt = "ChavSU Profile";
+//         profilePictureElement.className = "message-image";
+//         messageElement.appendChild(profilePictureElement);
+//     }
 
-    if (profilePicture) {
-        // If a profile picture is provided, create an image element for the profile picture
-        var profilePictureElement = document.createElement("img");
-        profilePictureElement.src = profilePicture;
-        profilePictureElement.alt = "ChavSU Profile";
-        profilePictureElement.className = "message-image";
-        messageElement.appendChild(profilePictureElement);
-    }
+//     // Create a message bubble
+//     var messageBubble = document.createElement("div");
+//     messageBubble.className = "message-bubble";
+//     messageBubble.innerHTML = message;
 
-    // Create a message bubble
-    var messageBubble = document.createElement("div");
-    messageBubble.className = "message-bubble";
-    messageBubble.innerHTML = message;
+//     // Append the message bubble to the message container
+//     messageElement.appendChild(messageBubble);
 
-    // Append the message bubble to the message container
-    messageElement.appendChild(messageBubble);
+//     // Append the message to the chat container
+//     chatMessages.appendChild(messageElement);
 
-    // Append the message to the chat container
-    chatMessages.appendChild(messageElement);
-
-    // Scroll to the bottom of the chat container
-    chatMessages.scrollTop = chatMessages.scrollHeight;
-}
+//     // Scroll to the bottom of the chat container
+//     chatMessages.scrollTop = chatMessages.scrollHeight;
+// }
