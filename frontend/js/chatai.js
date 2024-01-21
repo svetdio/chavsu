@@ -5,6 +5,17 @@ $(function () {
     }
 
     $('#logout').unbind('click').click(function () {
+        let conv_id = $(this).data('conv_id')
+        get_conversation(conv_id);
+    });
+
+
+    const get_conversation = function (conv_id) {
+        alert(conv_id)
+    }
+
+
+    $('#logout').unbind('click').click(function () {
         let c = confirm("Are you sure do you want to log out?")
         if (c) {
             localStorage.removeItem('chavsu_user')
@@ -12,18 +23,10 @@ $(function () {
         }
     });
 
-    // var botResponse = "Thank you for your message! This is just a sample response.";
-    // var botProfilePicture = "images/robot.png";
-    // displayMessage("ChavSU", botResponse, false, false, botProfilePicture);
-
     $('#send-button').unbind('click').click(function () {
         let q = $('#message-input').val();
         displayMessage("You", q, true);
         $('#message-input').val('')
-        
-        // var botResponse = "Thank you for your message! This is just a sample response.";
-        // var botProfilePicture = "images/robot.png";
-        // displayMessage("ChavSU", botResponse, false, botProfilePicture);
 
         $.get('http://localhost:8000/chat/', { q: q }, function (r) {
             let botProfilePicture = "images/robot.png";

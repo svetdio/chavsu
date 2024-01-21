@@ -12,7 +12,7 @@ $password = $_POST['password'];
 $query = "
     SELECT 
         * 
-    FROM admin 
+    FROM users 
     WHERE
     username = '$username'
     and

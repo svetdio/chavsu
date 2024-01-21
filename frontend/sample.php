@@ -39,6 +39,45 @@
             height: auto;
         }
 
+        #sidebar-content {
+            margin-top: 20px;
+        }
+
+        .sidebar-item {
+            position: relative;
+        }
+
+        .sidebar-item:hover .view-button {
+            opacity: 1;
+        }
+
+        .sidebar-item a {
+            display: block;
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 0;
+            border-bottom: 1px solid #555;
+            transition: background-color 0.3s;
+        }
+
+        .sidebar-item a:hover {
+            background-color: #555;
+        }
+
+        .view-button {
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            transform: translateY(-50%);
+            background-color: #4caf50;
+            color: #fff;
+            border: none;
+            padding: 6px 10px;
+            border-radius: 4px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
         #chat-container {
             flex-grow: 1;
             background-color: #fff;
@@ -171,13 +210,27 @@
 
 <div id="sidebar">
     <button id="toggle-sidebar-button" onclick="toggleSidebar()">Toggle Sidebar</button>
-    <!-- Add sidebar content here -->
+    <div id="logo-container">
+        <img src="your-logo-image-url.jpg" alt="Logo">
+    </div>
+    <div id="sidebar-content">
+        <div class="sidebar-item">
+            <a href="#">Home</a>
+            <button class="view-button" onclick="viewContent('Home')">View</button>
+        </div>
+        <div class="sidebar-item">
+            <a href="#">About</a>
+            <button class="view-button" onclick="viewContent('About')">View</button>
+        </div>
+        <div class="sidebar-item">
+            <a href="#">Contact</a>
+            <button class="view-button" onclick="viewContent('Contact')">View</button>
+        </div>
+        <!-- Add more sidebar items as needed -->
+    </div>
 </div>
 
 <div id="chat-container">
-    <div id="logo-container">
-        <img src="images/chavsu-head.png" alt="Logo">
-    </div>
     <div id="header">
         Chatbot Header
         <button id="logout-button" onclick="logout()"><i class="fas fa-sign-out-alt"></i> Logout</button>
@@ -188,11 +241,11 @@
             <div class="message-bubble">
                 Hello! How can I help you today?
             </div>
-            <img src="images/robot.png" alt="User Image" class="message-image">
+            <img src="user-image.jpg" alt="User Image" class="message-image">
         </div>
 
         <div class="message-container bot-message">
-            <img src="images/robot.png" alt="Bot Image" class="message-image">
+            <img src="bot-image.jpg" alt="Bot Image" class="message-image">
             <div class="message-bubble">
                 Hi there! I'm a friendly bot.
             </div>
@@ -202,7 +255,7 @@
             <div class="message-bubble">
                 I have a question about your services.
             </div>
-            <img src="images/robot.png" alt="User Image" class="message-image">
+            <img src="user-image.jpg" alt="User Image" class="message-image">
         </div>
 
         <!-- Add more messages as needed -->
@@ -270,6 +323,11 @@
     function logout() {
         // Add your logout logic here
         alert("Logout button clicked!");
+    }
+
+    function viewContent(content) {
+        // Add logic to handle viewing content
+        alert("Viewing " + content + " content!");
     }
 </script>
 
