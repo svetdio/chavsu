@@ -72,7 +72,6 @@ $(function () {
             if (d.success) {
                 let conv_id = d.conv_id
                 getConversationList();
-                get_conversation(conv_id);
                 displayMessage(conv_id, "Hi there! I'm <strong>ChavSU.</strong> How can I assist you?", false);
             } else {
                 alert(d.error);

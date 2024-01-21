@@ -26,7 +26,9 @@ $stmt = $db->query($query);
 $conv = array();
 
 while ($r = $stmt->fetch_assoc()) {
-    $conv[] = $r;
+    if (!is_null($r['message'])) {
+        $conv[] = $r;
+    }
 }
 
 if (!empty($conv)) {
