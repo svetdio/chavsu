@@ -118,23 +118,21 @@ $(function () {
         })
     }
 
-
-    $('#new_chat').unbind('click').click(function () {
+    const createNewConvo = function () {
         $.post('api/add_conversation.php', { userID }, function (r) {
             let d = JSON.parse(r);
 
             if (d.success) {
                 let conv_id = d.conv_id
                 getConversationList();
+                $('#chat-messages').html('');
                 $('#send-button').attr('data-conv_id', conv_id);
                 displayMessage(conv_id, "Hi there! I'm <strong>ChavSU.</strong> How can I assist you?", false);
             } else {
                 alert(d.error);
             }
         });
-    });
-
-    getConversationList();
+    }
 
     const get_conversation = function (conv_id) {
         $('#chat-messages').html('');
@@ -156,6 +154,21 @@ $(function () {
             }
         })
     }
+
+    const predict = function (q) {
+        $.get('http://localhost:8000/chat/', { q: q }, function (r) {
+            // Hide typing indicator when the response is received
+            hideTypingIndicator();
+
+            displayMessage(conv_id, r, false);
+        });
+    }
+
+    getConversationList();
+
+    $('#new_chat').unbind('click').click(function () {
+        createNewConvo();
+    });
 
     $('#logout').unbind('click').click(function () {
         let c = confirm("Are you sure you want to log out?")
@@ -184,12 +197,9 @@ $(function () {
             // Show typing indicator
             showTypingIndicator();
 
-            $.get('http://localhost:8000/chat/', { q: q }, function (r) {
-                // Hide typing indicator when the response is received
-                hideTypingIndicator();
-
-                displayMessage(conv_id, r, false);
-            });
+            predict()
+        } else {
+            // $('#new_chat').trigger('click');
         }
     });
 });
