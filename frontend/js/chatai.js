@@ -185,7 +185,8 @@ $(function () {
         // If the input value is empty, disable the send button; otherwise, enable it
         $('#send-button').prop('disabled', $(this).val().trim() === '');
     });
-$('#send-button').unbind('click').click(function () {
+
+    $('#send-button').unbind('click').click(function () {
         let q = $('#message-input').val();
         let conv_id = $(this).data('conv_id')
 
