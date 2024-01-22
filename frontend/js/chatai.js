@@ -182,10 +182,12 @@ $(function () {
 
             $('#message-input').val('');
             // Show typing indicator
+            $('#send-button').prop('disabled', $(this).val().trim() === '');
             showTypingIndicator();
 
             $.get('http://localhost:8000/chat/', { q: q }, function (r) {
                 // Hide typing indicator when the response is received
+                $('#send-button').prop('disabled', true);
                 hideTypingIndicator();
 
                 displayMessage(conv_id, r, false);
