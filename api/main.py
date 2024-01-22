@@ -58,5 +58,3 @@ def Chavsu(q):
     query_engine = index.as_chat_engine(chat_mode='context')
     response = query_engine.chat(q)
     return response.response
-
-
