@@ -198,7 +198,7 @@ $(function () {
             $('#send-button').prop('disabled', $(this).val().trim() === '');
             showTypingIndicator();
 
-            predict()
+            predict(q)
         } else {
             // $('#new_chat').trigger('click');
         }
