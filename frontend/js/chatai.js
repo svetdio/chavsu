@@ -59,7 +59,7 @@ $(function () {
             var conActions = document.createElement('button')
             conActions.className = "del-button";
             conActions.setAttribute("data-conv_id", conv.conv_id);
-            conActions.innerHTML = "Delete"
+            conActions.innerHTML = '<i class="fa fa-trash" aria-hidden="true"></i>'
             convElement.appendChild(convName);
             convElement.appendChild(conActions);
         } else {
