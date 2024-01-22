@@ -155,7 +155,7 @@ $(function () {
         })
     }
 
-    const predict = function (q) {
+    const predict = function (conv_id, q) {
         $.get('http://localhost:8000/chat/', { q: q }, function (r) {
             // Hide typing indicator when the response is received
             hideTypingIndicator();
@@ -185,8 +185,7 @@ $(function () {
         // If the input value is empty, disable the send button; otherwise, enable it
         $('#send-button').prop('disabled', $(this).val().trim() === '');
     });
-
-    $('#send-button').unbind('click').click(function () {
+$('#send-button').unbind('click').click(function () {
         let q = $('#message-input').val();
         let conv_id = $(this).data('conv_id')
 
@@ -198,7 +197,7 @@ $(function () {
             $('#send-button').prop('disabled', $(this).val().trim() === '');
             showTypingIndicator();
 
-            predict(q)
+            predict(conv_id, q)
         } else {
             // $('#new_chat').trigger('click');
         }
