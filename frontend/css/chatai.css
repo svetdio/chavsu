@@ -10,6 +10,17 @@ body {
     display: flex;
     height: 100vh;
     overflow: hidden;
+    opacity: 0; /* Set initial opacity to 0 */
+    animation: fadeIn 1s ease-in-out forwards; /* Animation for fading in */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 #sidebar {
