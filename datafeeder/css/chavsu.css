@@ -1,0 +1,105 @@
+body {
+  background-color: #eeeeee;
+}
+
+.edit-kword i {
+  border-radius: 2px;
+  color: #000000;
+  padding: 5px;
+  display: inline-block;
+  margin: 5px;
+}
+
+.del-kword i {
+  border-radius: 2px;
+  color: #d50303;
+  padding: 5px;
+  display: inline-block;
+  margin: 5px;
+}
+
+td {
+  text-align: center;
+}
+
+.title {
+  text-align: center;
+  font-family: "Century Gothic", sans-serif;
+  font-weight: bold;
+  margin-top: 1%;
+}
+
+label {
+  color: #000000;
+  display: block;
+  font-size: 13px;
+  margin-bottom: 8px;
+}
+
+textarea {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin-bottom: 30px;
+  box-sizing: border-box;
+  font-family: inherit;
+  height: 70px;
+  resize: none;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  transform: none;
+}
+
+.table-container {
+  float: right;
+  width: 50%;
+  margin-top: 50px;
+}
+
+/* table {
+  width: 100%;
+  max-width: 80%;
+  margin: 0 auto;
+  border-collapse: collapse;
+  margin-top: 20px;
+} */
+
+caption {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+#logout {
+  padding: 10px;
+  cursor: pointer;
+  text-decoration: none;
+  position: relative;
+  float: right;
+  margin-right: 1%;
+  margin-top: 1%;
+  background-color: #c0392b;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#logout:active {
+  transform: scale(0.9);
+}
+
+#add-data {
+  margin-bottom: 10px;
+  text-align: right;
+}
+
+#add-data button{
+  cursor: pointer;
+  background-color: #048835;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+}
