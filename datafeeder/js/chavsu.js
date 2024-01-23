@@ -33,39 +33,6 @@ $(function () {
         })
     });
 
-    // You should perform proper validation before sending data to the serve
-    const getKeywords = function () {
-        $.get('api/view_keyword.php', function (d) {
-            let data = JSON.parse(d);
-            if (data.success) {
-                let rows = [];
-                let itr = 0;
-    
-                data.keywords.forEach(keyword => {
-                    rows[itr++] = "<tr>";
-                    rows[itr++] = "<td>"
-                        + "<a class='edit-kword js-modal-trigger' data-target='upd_kwords_form' data-kid='" + keyword.id + "' href='#'><i class='fa fa-edit'></i></a>"
-                        + "<a class='del-kword' data-kid='" + keyword.id + "' href='#'><i class='fa fa-trash'></i></a>"
-                        + "</td>";
-                    rows[itr++] = "<td>" + keyword.keywords + "</td>";
-                    rows[itr++] = "<td>" + keyword.response + "</td>";
-                    rows[itr++] = "</tr>";
-                });
-    
-                $('table tbody#keywordTableBody').html(rows.join());
-    
-                createModal();
-                $('#keyword-tbl').DataTable();
-    
-                editKeyword(data.keywords);
-                deleteKeyword();  // Move this here to ensure proper event delegation
-            } else {
-                alert('No Data');
-            }
-        });
-    };
-    getKeywords();    
-s
     const deleteKeyword = function () {
         $('a.del-kword').on('click').click(function () {
             let c = confirm("Are you sure do you want to remove this data?")
@@ -101,21 +68,7 @@ s
         });
     }
 
-    function openModal($el) {
-        $el.classList.add('is-active');
-    }
-
-    function closeModal($el) {
-        $el.classList.remove('is-active');
-    }
-
-    function closeAllModals() {
-        (document.querySelectorAll('.modal') || []).forEach(($modal) => {
-            closeModal($modal);
-        });
-    }
-
-    function createModal() {
+    const createModal = function () {
         // Add a click event on buttons to open a specific modal
         (document.querySelectorAll('.js-modal-trigger') || []).forEach(($trigger) => {
             const modal = $trigger.dataset.target;
@@ -142,6 +95,59 @@ s
             }
         });
     }
+
+    // You should perform proper validation before sending data to the serve
+    const getKeywords = function () {
+        if ($.fn.DataTable.isDataTable('#keyword-tbl')) {
+            $('#keyword-tbl').DataTable().destroy();
+        }
+        $.get('api/view_keyword.php', function (d) {
+            let data = JSON.parse(d);
+            if (data.success) {
+                let rows = [];
+                let itr = 0;
+
+                data.keywords.forEach(keyword => {
+                    rows[itr++] = "<tr>";
+                    rows[itr++] = "<td>"
+                        + "<a class='edit-kword js-modal-trigger' data-target='upd_kwords_form' data-kid='" + keyword.id + "' href='#'><i class='fa fa-edit'></i></a>"
+                        + "<a class='del-kword' data-kid='" + keyword.id + "' href='#'><i class='fa fa-trash'></i></a>"
+                        + "</td>";
+                    rows[itr++] = "<td>" + keyword.keywords + "</td>";
+                    rows[itr++] = "<td>" + keyword.response + "</td>";
+                    rows[itr++] = "</tr>";
+                });
+
+                $('#keyword-tbl tbody#keywordTableBody').html(rows.join());
+
+                editKeyword(data.keywords);
+                deleteKeyword();  // Move this here to ensure proper event delegation
+                createModal();
+                $('#keyword-tbl').DataTable({
+                    "width": "100%"
+                });
+            } else {
+                alert('No Data');
+            }
+        });
+    };
+    getKeywords();
+
+    function openModal($el) {
+        $el.classList.add('is-active');
+    }
+
+    function closeModal($el) {
+        $el.classList.remove('is-active');
+    }
+
+    function closeAllModals() {
+        (document.querySelectorAll('.modal') || []).forEach(($modal) => {
+            closeModal($modal);
+        });
+    }
+
+
     $('#logout').unbind('click').click(function () {
         let c = confirm("Are you sure do you want to log out?")
         if (c) {

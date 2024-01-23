@@ -19,44 +19,45 @@
 
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
+
 <body>
 
   <!-- Logout nav -->
   <a href="#" id="logout" title="Log out" aria-hidden="true">
-      <i class="fa fa-sign-out" style="font-size: 18px;"></i>
+    <i class="fa fa-sign-out" style="font-size: 18px;"></i>
   </a>
 
   <section class="section">
-  <h1 class="title">ChavSU DATA ENTRY</h1>
+    <h1 class="title">ChavSU DATA ENTRY</h1>
     <!-- Add data nav -->
     <div id="add-data" class="flex flex-row-reverse pb-4 px-4 text-xl font-extrabold float-none">
       <button class="text-white rounded-2xl text-lg w-60 py-3 inset-y-0 right-0 focus:outline-none js-modal-trigger" data-target="add_kwords_form">
-          <i class="fa fa-plus" aria-hidden="true"></i>
-          Add New Data
+        <i class="fa fa-plus" aria-hidden="true"></i>
+        Add New Data
       </button>
     </div>
 
-    <div class="container is-fluid"> 
+    <div class="container is-fluid">
       <div class="columns">
 
-          <!-- Table Entry -->
-          <div class="h-full overflow-y-auto px-2">
-            <div class="dataTables_wrapper no-footer">
-              <table class="display" id="keyword-tbl">
-                <caption>Entered Data</caption>
-                <thead>
-                  <tr>
-                    <th>Actions</th>
-                    <th>Keyword</th>
-                    <th>Response</th>
-                  </tr>
-                </thead>
-                <tbody id="keywordTableBody">
-                  <!-- Keywords will be dynamically added here -->
-                </tbody>
-              </table>
-            </div>
+        <!-- Table Entry -->
+        <div class="h-full overflow-y-auto px-2">
+          <div class="dataTables_wrapper no-footer">
+            <table class="display" id="keyword-tbl">
+              <caption>Entered Data</caption>
+              <thead>
+                <tr>
+                  <th>Actions</th>
+                  <th>Keyword</th>
+                  <th>Response</th>
+                </tr>
+              </thead>
+              <tbody id="keywordTableBody">
+                <!-- Keywords will be dynamically added here -->
+              </tbody>
+            </table>
           </div>
+        </div>
 
 
       </div>
@@ -114,4 +115,5 @@
   </div>
 
 </body>
+
 </html>
