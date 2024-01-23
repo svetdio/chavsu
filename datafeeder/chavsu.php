@@ -14,7 +14,8 @@
   <!-- Link to external JavaScript file -->
   <script src="js/jquery-3.7.1.min.js"></script>
   <script src="js/datatables.js"></script>
-  <script src="js/script.js"></script>
+  <script src="js/alpine.min.js"></script>
+  <script src="js/chavsu.js"></script>
 
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
