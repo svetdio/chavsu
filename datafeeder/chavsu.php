@@ -22,23 +22,17 @@
 <body>
   
 <section class="section">
-  <div class="container is-fluid">
+  <div class="container is-fluid"> 
     <div class="columns">
-      <div class="column is-one-third">
-        <!-- Left Content -->
-        <div class="content">
+
+        <!-- <div class="content">
           <h1>CHAVSU - IMUS CAMPUS</h1>
-
-          <label class="label" id="keyw" for="keywords">Keywords:</label>
-          <textarea class="textarea" id="keywords" name="keywords" placeholder="Enter keywords..."></textarea>
-
-          <label class="label" id="resp" for="response">Response:</label>
-          <textarea class="textarea" id="response" name="response" placeholder="Enter response..."></textarea>
-
-          <div class="content has-text-centered">
-            <button class='button is-success' id="saveButton">SAVE</button>
-          </div>
-        </div>
+        </div> -->
+      <div class="flex flex-row-reverse pb-4 px-4 text-xl font-extrabold float-none">
+          <button class="text-white rounded-2xl text-lg w-60 py-3 inset-y-0 right-0 focus:outline-none bg-cyan-500 hover:bg-cyan-600 js-modal-trigger" data-target="add_kwords_form">
+              <i class="fa fa-plus" aria-hidden="true"></i>
+              Add New Data
+          </button>
       </div>
 
       <div class="column">
@@ -59,15 +53,42 @@
           </table>
         </div>
       </div>
+
     </div>
   </div>
 </section>
 
+<!-- Add New Data -->
+<div id='add_kwords_form' class="modal">
+  <div class="modal-background"></div>
+  <div class="modal-card">
+    <header class="modal-card-head">
+      <p class="modal-card-title">Add New Data</p>
+      <button class="delete" aria-label="close"></button>
+    </header>
+    <section class="modal-card-body">
+      <div class="field">
+        <label class="label" id="keyw" for="keywords">Keywords:</label>
+        <textarea class="textarea" id="keywords" name="keywords" placeholder="Enter keywords..."></textarea>
+      </div>
+      <div class="field">
+        <label class="label" id="resp" for="response">Response:</label>
+        <textarea class="textarea" id="response" name="response" placeholder="Enter response..."></textarea>
+      </div>
+    </section>
+    <footer class="modal-card-foot">
+      <button class="button is-success" id='saveButton'>Save</button>
+      <button class="button cancel">Cancel</button>
+    </footer>
+  </div>
+</div>
+
+<!-- Update Data -->
 <div id='upd_kwords_form' class="modal">
   <div class="modal-background"></div>
   <div class="modal-card">
     <header class="modal-card-head">
-      <p class="modal-card-title">Edit Entry</p>
+      <p class="modal-card-title">Edit Data</p>
       <button class="delete" aria-label="close"></button>
     </header>
     <section class="modal-card-body">
