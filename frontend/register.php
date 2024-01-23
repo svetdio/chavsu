@@ -10,6 +10,8 @@
   <link rel="stylesheet" type="text/css" href="css/register.css">
 
   <!-- Link to external JavaScript file -->
+  <script src="js/jquery-3.7.1.min.js"></script>
+  <script src='js/register.js'> </script>
 
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
@@ -31,10 +33,10 @@
         <input type="password" id="pass" class="pass" placeholder="Enter your password">
 
         <label for="pass" class="password">Confirm your password</label>
-        <input type="password" id="pass" class="pass" placeholder="Re-enter your password">
+        <input type="password" id="confirm-pass" class="pass" placeholder="Re-enter your password">
 
         <div class="button-container">
-            <button id="signin" type="button"><strong>SIGN IN</strong></button>
+            <button id="signin" type="submit"><strong>SIGN UP</strong></button>
             <button id="back" type="button"><strong>BACK</strong></button>
         </div>
 
