@@ -1,4 +1,21 @@
 $(function () {
+    const validatePasswords = function (pass1) {
+        var minNumberofChars = 8;
+        var regularExpression = /^(?=.*\d)(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
+
+        // If less than 8 characters
+        if (pass1.length < minNumberofChars) {
+            return { "success": false, "errorMsg": "Password should be 8 characters or longer" };
+        }
+
+        // if has atleast 1 number and special character
+        if (!regularExpression.test(pass1)) {
+            return { "success": false, "errorMsg": "Password should contain at least 1 special character, 1 uppercase letter, and 1 number" };
+        }
+
+        return { "success": true };
+    }
+
     if (typeof localStorage['chavsu_user'] !== 'undefined') {
         alert("You are already logged-in");
         window.location = 'chatai.php';
@@ -21,18 +38,18 @@ $(function () {
 
         $('#signin').on("click", function (e) {
             e.preventDefault();
-
-            let fname = $('input#email').val();
+            let email = $('input#email').val();
             let pass = $('input#pass').val();
             let pass2 = $('input#confirm-pass').val();
             let hasError = false;
 
-            if (fname == "") {
-                $('span#email').html('First name is required.');
+            if (email == "") {
+                $('span#email').html('Username is required.');
             } else {
                 $('span#email').html("");
             }
             let password_validation = validatePasswords(pass)
+
             if (!password_validation.success) {
                 $('span#pass').html(password_validation.errorMsg);
             } else {

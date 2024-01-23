@@ -14,7 +14,7 @@ $query = "
         * 
     FROM users 
     WHERE
-    username = '$email'
+    username = '$username'
 ";
 
 $stmt = $db->query($query);
@@ -32,7 +32,7 @@ if (is_array($users) && count($users) > 0) {
 
     $stmt2 = $db->prepare($query2);
 
-    $stmt2->bind_param("ssssi", $email , $pass);
+    $stmt2->bind_param("ss", $username, $password);
 
     if ($stmt2->execute()) {
         echo json_encode(array("result" => "success"));
