@@ -63,6 +63,7 @@ body {
         transform: translateY(0);
     }
 }
+
 .log {
     width: 30px; /* Set the width of the log.png image */
     height: 30px; /* Set the height of the log.png image */
@@ -105,17 +106,6 @@ input {
     border-radius: 4px;
 }
 
-.forgot-pass {
-    color: #000000;
-    text-align: right; /* Align text to the right */
-    font-family: "CenturyGothic-Italic", sans-serif;
-    font-size: 16px;
-    font-weight: 400;
-    font-style: italic;
-    width: 100%; /* Full width for responsiveness */
-    margin-top: -17px; /* Adjusted margin */
-}
-
 .register {
     color: #000000;
     text-align: left;
@@ -136,7 +126,7 @@ input {
     border-radius: 4px;
     cursor: pointer;
     width: 100%;
-    margin-top: 30px;
+    margin-top: 10px;
     color: black;
     font-family: "CenturyGothic-Italic", sans-serif;
     font-size: 16px;

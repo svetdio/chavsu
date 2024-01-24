@@ -38,7 +38,6 @@
       <label for="pass" class="password">Password</label>
       <input type="password" id="pass" class="pass" placeholder="Enter your password">
 
-      <div class="forgot-pass"><a href="reset-pass.php" style="color: black;">Forgot password?</a></div>
 
       <!-- TODO: temporary -->
       <button id="login" type="button"><strong>LOG IN</strong></button>
