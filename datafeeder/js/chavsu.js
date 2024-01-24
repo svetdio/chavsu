@@ -29,6 +29,8 @@ $(function () {
 
         $.post('api/save_keyword.php', { k, r }, function (d) {
             alert('New data has succesfully added')
+            $('#keywords').val('');
+            $('#response').val('');
             getKeywords();
         })
     });
