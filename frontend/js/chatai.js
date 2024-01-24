@@ -43,7 +43,7 @@ $(function () {
         }
     }
 
-    const createConvList = function (conv = false) {
+    const createConvList = function (conv = false, idx = 0) {
         var convList = document.getElementById("sidebar-content");
         var convElement = document.createElement("div");
         convElement.className = "sidebar-item";
@@ -53,7 +53,7 @@ $(function () {
 
             var convName = document.createElement('a')
             convName.href = '#'
-            convName.innerHTML = "Chat # " + conv.conv_id
+            convName.innerHTML = "Chat # " + (idx + 1)
             convName.setAttribute("data-conv_id", conv.conv_id);
 
             var conActions = document.createElement('button')
@@ -86,8 +86,8 @@ $(function () {
             let d = JSON.parse(r);
 
             if (d.success) {
-                d.list.forEach(function (v) {
-                    createConvList(v)
+                d.list.forEach(function (v, i) {
+                    createConvList(v, d.list.length - 1 - i)
                 })
             } else {
                 createConvList()

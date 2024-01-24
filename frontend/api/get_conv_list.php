@@ -12,7 +12,7 @@ $query = "SELECT
     FROM conversation c 
     WHERE 
         c.userID = $userID
-    ORDER BY c.added_date DESC
+    ORDER BY c.added_date
     ";
 
 $stmt = $db->query($query);
